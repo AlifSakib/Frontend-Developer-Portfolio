@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Linkedin, Github, Mail, ArrowDown, MapPin, Sparkles, Check } from 'lucide-react';
 import { UserProfile, TechStackItem } from '../types';
 import { TechIconBadge } from './TechIcons';
+import heroImage from "../../assets/hero/personal-photo.jpeg";
 
 interface HeroProps {
   profile: UserProfile;
@@ -12,7 +13,10 @@ export const Hero: React.FC<HeroProps> = ({ profile, techStack }) => {
   const [hoveredTech, setHoveredTech] = useState<TechStackItem | null>(null);
 
   return (
-    <section id="home" className="min-h-screen pt-32 pb-20 flex flex-col justify-center relative">
+    <section
+      id="home"
+      className="min-h-screen pt-32 pb-20 flex flex-col justify-center relative"
+    >
       <div className="max-w-6xl mx-auto px-5 sm:px-8 w-full">
         {/* Main Hero Split */}
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-16">
@@ -22,15 +26,21 @@ export const Hero: React.FC<HeroProps> = ({ profile, techStack }) => {
             {profile.isOpenToWork && (
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/80 text-emerald-700 dark:text-emerald-300 text-xs font-bold tracking-tight shadow-xs">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span>{profile.statusText || 'Available for opportunities'}</span>
+                <span>
+                  {profile.statusText || "Available for opportunities"}
+                </span>
               </div>
             )}
 
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.12]">
-              {profile.title}{' '}
-              <span className="inline-block animate-wave select-none" role="img" aria-label="waving hand">
-                {profile.wavingEmoji || '👋'}
+              {profile.title}{" "}
+              <span
+                className="inline-block animate-wave select-none"
+                role="img"
+                aria-label="waving hand"
+              >
+                {profile.wavingEmoji || "👋"}
               </span>
             </h1>
 
@@ -93,9 +103,9 @@ export const Hero: React.FC<HeroProps> = ({ profile, techStack }) => {
               <div
                 className="w-full h-full animate-morph overflow-hidden border-[3.5px] border-slate-900 dark:border-slate-100 transition-all duration-700 shadow-2xl bg-cover bg-center"
                 style={{
-                  backgroundImage: `url('/assets/hero/personal photo.jpeg'), url(${profile.avatarUrl})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center 20%',
+                  backgroundImage: `url(${heroImage}), url(${profile.avatarUrl})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center 20%",
                 }}
                 role="img"
                 aria-label={`${profile.name} portrait`}
@@ -103,8 +113,14 @@ export const Hero: React.FC<HeroProps> = ({ profile, techStack }) => {
 
               {/* Floating React badge on blob */}
               <div className="absolute -bottom-2 -left-2 bg-white dark:bg-slate-800 p-2 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 flex items-center gap-2 animate-float">
-                <TechIconBadge iconKey="react" name="React" className="w-6 h-6" />
-                <span className="text-xs font-bold text-slate-800 dark:text-slate-100 pr-1">React Dev</span>
+                <TechIconBadge
+                  iconKey="react"
+                  name="React"
+                  className="w-6 h-6"
+                />
+                <span className="text-xs font-bold text-slate-800 dark:text-slate-100 pr-1">
+                  React Dev
+                </span>
               </div>
             </div>
           </div>
@@ -130,12 +146,18 @@ export const Hero: React.FC<HeroProps> = ({ profile, techStack }) => {
                   onMouseLeave={() => setHoveredTech(null)}
                   className="group relative p-2 rounded-xl bg-white dark:bg-slate-800 shadow-xs hover:shadow-md border border-slate-200/80 dark:border-slate-700/80 cursor-pointer transition-all duration-300 transform hover:-translate-y-1.5 hover:scale-110"
                 >
-                  <TechIconBadge iconKey={tech.iconKey} name={tech.name} className="w-8 h-8 sm:w-9 sm:h-9" />
+                  <TechIconBadge
+                    iconKey={tech.iconKey}
+                    name={tech.name}
+                    className="w-8 h-8 sm:w-9 sm:h-9"
+                  />
 
                   {/* Tooltip on hover */}
                   <div className="opacity-0 pointer-events-none group-hover:opacity-100 absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[11px] font-semibold py-1 px-2.5 rounded-md whitespace-nowrap shadow-xl z-20 transition-opacity duration-200">
                     <span>{tech.name}</span>
-                    <span className="text-blue-400 ml-1">({tech.proficiency}%)</span>
+                    <span className="text-blue-400 ml-1">
+                      ({tech.proficiency}%)
+                    </span>
                     <div className="w-2 h-2 bg-slate-900 rotate-45 absolute -bottom-1 left-1/2 -translate-x-1/2"></div>
                   </div>
                 </div>

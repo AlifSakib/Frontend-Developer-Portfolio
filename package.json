@@ -8,7 +8,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "start": "react-scripts start"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -31,6 +34,7 @@
     "@types/react": "^19.2.18",
     "autoprefixer": "^10.4.21",
     "esbuild": "^0.25.0",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4.1.14",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
