@@ -14,7 +14,14 @@ export interface Project {
   tagline: string;
   description: string;
   longDescription: string;
-  category: 'React / Next.js' | 'Full Stack' | 'UI / Tools';
+  category:
+    | "React / Next.js"
+    | "Full Stack"
+    | "UI / Tools"
+    | "React / Canvas"
+    | "React Native"
+    | "Open Source"
+    | "AI";
   featured: boolean;
   image: string;
   techStack: string[];
@@ -23,7 +30,15 @@ export interface Project {
   highlights: string[];
   keyFeatures: string[];
   architectureNotes?: string;
-  interactiveDemoId?: 'ecommerce' | 'analytics' | 'kanban' | 'code-sandbox' | 'weather';
+  interactiveDemoId?:
+    | "ecommerce"
+    | "analytics"
+    | "kanban"
+    | "code-sandbox"
+    | "weather"
+    | "docucanvas"
+    | "gift-genie"; // Added new interactive demo ID for Gift Genie
+
 }
 
 export interface Experience {

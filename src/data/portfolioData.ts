@@ -39,116 +39,225 @@ export const techStackList: TechStackItem[] = [
 ];
 
 export const initialProjects: Project[] = [
+  // {
+  //   id: 'nexus-ecommerce',
+  //   title: 'NEXUS E-COMMERCE & LUXURY STORE',
+  //   tagline: 'High-performance fashion & gear marketplace with instant filters, cart drawer, and responsive checkout.',
+  //   description: 'A cutting-edge eCommerce platform built with React, Tailwind CSS, and Stripe checkout simulation. Features instant keyword search, multi-attribute filtering, persistent cart state with local storage, and slick responsive micro-interactions.',
+  //   longDescription: 'Nexus is a full-featured online marketplace designed to provide a frictionless shopping experience with lightning-fast page loads under 800ms. It features custom-built image carousels, responsive slide-out cart drawers, dynamic price calculations with coupon logic, and dark/light adaptive theming.',
+  //   category: 'React / Next.js',
+  //   featured: true,
+  //   image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+  //   techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Zustand', 'Motion'],
+  //   liveUrl: 'https://nexus-store-demo.vercel.app',
+  //   githubUrl: 'https://github.com/alifsakib/nexus-ecommerce',
+  //   highlights: ['99/100 Lighthouse Performance', 'Sub-second search indexing', 'Zero-layout-shift UI'],
+  //   keyFeatures: [
+  //     'Interactive Product Showcase with zoom view & color swatches',
+  //     'Global Zustand Cart store with badge counters and persistent checkout',
+  //     'Filter by category, price range, and in-stock availability',
+  //     'Optimized image loading with blur-up placeholders'
+  //   ],
+  //   architectureNotes: 'Modular component architecture with decoupled state stores and memoized subtrees for 60fps scrolling performance.',
+  //   interactiveDemoId: 'ecommerce'
+  // },
   {
-    id: 'nexus-ecommerce',
-    title: 'NEXUS E-COMMERCE & LUXURY STORE',
-    tagline: 'High-performance fashion & gear marketplace with instant filters, cart drawer, and responsive checkout.',
-    description: 'A cutting-edge eCommerce platform built with React, Tailwind CSS, and Stripe checkout simulation. Features instant keyword search, multi-attribute filtering, persistent cart state with local storage, and slick responsive micro-interactions.',
-    longDescription: 'Nexus is a full-featured online marketplace designed to provide a frictionless shopping experience with lightning-fast page loads under 800ms. It features custom-built image carousels, responsive slide-out cart drawers, dynamic price calculations with coupon logic, and dark/light adaptive theming.',
-    category: 'React / Next.js',
+    id: "docucanvas-studio",
+    title: "DOCUCANVAS",
+    tagline:
+      "Full-featured document studio with multi-page vector annotations, interactive form builder, visual split-screen diffing, and signature pad.",
+    description:
+      "A high-performance web document studio and markup canvas built with React, TypeScript, and Tailwind CSS. Features multi-page vector drafting, interactive form design & fill modes, split-screen visual diff comparisons, threaded review pins, and client-side vector PDF compilation.",
+    longDescription:
+      "DocuCanvas is an end-to-end document review and form-building studio engineered for complex workflows. It includes a sub-pixel precision coordinate canvas with multi-page management, freehand drawing with smooth SVG path interpolations, geometric shapes, dimensional measurement tools, a digital signature pad with calligraphy fonts, visual document diffing with overlay sliders, and client-side high-resolution PDF/image exports.",
+    category: "React / Canvas",
     featured: true,
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
-    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Zustand', 'Motion'],
-    liveUrl: 'https://nexus-store-demo.vercel.app',
-    githubUrl: 'https://github.com/alifsakib/nexus-ecommerce',
-    highlights: ['99/100 Lighthouse Performance', 'Sub-second search indexing', 'Zero-layout-shift UI'],
-    keyFeatures: [
-      'Interactive Product Showcase with zoom view & color swatches',
-      'Global Zustand Cart store with badge counters and persistent checkout',
-      'Filter by category, price range, and in-stock availability',
-      'Optimized image loading with blur-up placeholders'
+    image:
+      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1200&q=80",
+    techStack: [
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "jsPDF",
+      "Canvas Confetti",
+      "Lucide Icons",
     ],
-    architectureNotes: 'Modular component architecture with decoupled state stores and memoized subtrees for 60fps scrolling performance.',
-    interactiveDemoId: 'ecommerce'
+    liveUrl: "https://docucanvas-demo.vercel.app",
+    githubUrl: "https://github.com/alifsakib/docucanvas",
+    highlights: [
+      "Sub-pixel coordinate transformation system",
+      "Interactive vector selection, rotation & endpoint handles",
+      "Real-time split-screen visual diff & change detection",
+      "Client-side vector PDF & structured JSON export",
+    ],
+    keyFeatures: [
+      "Vector markup suite: Pen, highlighter, shapes, connector lines, arrows, and measurement tools",
+      "Form builder & Fill-and-Sign mode with validation and touch-enabled signature pad",
+      "Multi-page canvas stage with rulers, zoom presets (50%-200%), and search indexing",
+      "Threaded review comments and in-object floating action toolbar (delete, duplicate)",
+    ],
+    architectureNotes:
+      "Built on a decoupled vector layer model with pure SVG geometry pipelines, event-driven state undo/redo stacks, and client-side jsPDF rendering.",
+    interactiveDemoId: "docucanvas",
   },
   {
-    id: 'pulse-analytics',
-    title: 'PULSE ANALYTICS & SAAS DASHBOARD',
-    tagline: 'Real-time telemetry and revenue intelligence dashboard with interactive metrics visualizers.',
-    description: 'A comprehensive SaaS analytics suite providing product managers and founders with live customer acquisition, churn analysis, MRR forecasts, and geographic heatmaps. Built with React, Tailwind, and Recharts.',
-    longDescription: 'Pulse consolidates distributed cloud metrics into an intuitive command center. It includes real-time telemetry streaming simulation, custom time-range comparators, drag-to-reorder widget grids, and CSV data export capabilities.',
-    category: 'React / Next.js',
+    id: "pulse-analytics",
+    title: "PULSE ANALYTICS & SAAS DASHBOARD",
+    tagline:
+      "Real-time telemetry and revenue intelligence dashboard with interactive metrics visualizers.",
+    description:
+      "A comprehensive SaaS analytics suite providing product managers and founders with live customer acquisition, churn analysis, MRR forecasts, and geographic heatmaps. Built with React, Tailwind, and Recharts.",
+    longDescription:
+      "Pulse consolidates distributed cloud metrics into an intuitive command center. It includes real-time telemetry streaming simulation, custom time-range comparators, drag-to-reorder widget grids, and CSV data export capabilities.",
+    category: "React / Next.js",
     featured: true,
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
-    techStack: ['React', 'Next.js', 'Tailwind CSS', 'Recharts', 'TypeScript'],
-    liveUrl: 'https://pulse-metrics-hub.vercel.app',
-    githubUrl: 'https://github.com/alifsakib/pulse-analytics-dashboard',
-    highlights: ['Live chart tooltips & time slicing', 'Adaptive dark/light theme', 'Export to PDF/CSV'],
-    keyFeatures: [
-      'Interactive Metric cards with weekly percentage deltas',
-      'Multi-series Revenue & Conversion rate area graphs',
-      'Real-time transaction feed with status filters',
-      'System health and active session monitoring'
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    techStack: ["React", "Next.js", "Tailwind CSS", "Recharts", "TypeScript"],
+    liveUrl: "https://pulse-analytics-lyart.vercel.app/",
+    githubUrl: "https://github.com/AlifSakib/pulse-analytics",
+    highlights: [
+      "Live chart tooltips & time slicing",
+      "Adaptive dark/light theme",
+      "Export to PDF/CSV",
     ],
-    architectureNotes: 'Utilizes React memoization and debounced resize handlers to smoothly render multi-thousand data point series.',
-    interactiveDemoId: 'analytics'
+    keyFeatures: [
+      "Interactive Metric cards with weekly percentage deltas",
+      "Multi-series Revenue & Conversion rate area graphs",
+      "Real-time transaction feed with status filters",
+      "System health and active session monitoring",
+    ],
+    architectureNotes:
+      "Utilizes React memoization and debounced resize handlers to smoothly render multi-thousand data point series.",
+    interactiveDemoId: "analytics",
   },
   {
-    id: 'cocreate-kanban',
-    title: 'COCREATE WORKFLOW & KANBAN SUITE',
-    tagline: 'Modern project management board with drag-and-drop tasks, tags, priority queues, and sprint tracking.',
-    description: 'A productivity suite engineered for agile developer teams. Supports drag-and-drop column transitions, markdown card descriptions, custom tags, subtask checklists, and time tracking.',
-    longDescription: 'CoCreate solves team coordination friction with an ultra-responsive drag-and-drop board interface. Cards support rich rich-text notes, checklist progress bars, estimated vs actual hours, and keyboard shortcuts for rapid backlog organization.',
-    category: 'UI / Tools',
+    id: "cocreate-kanban",
+    title: "COCREATE WORKFLOW & KANBAN SUITE",
+    tagline:
+      "Modern project management board with drag-and-drop tasks, tags, priority queues, and sprint tracking.",
+    description:
+      "A productivity suite engineered for agile developer teams. Supports drag-and-drop column transitions, markdown card descriptions, custom tags, subtask checklists, and time tracking.",
+    longDescription:
+      "CoCreate solves team coordination friction with an ultra-responsive drag-and-drop board interface. Cards support rich rich-text notes, checklist progress bars, estimated vs actual hours, and keyboard shortcuts for rapid backlog organization.",
+    category: "UI / Tools",
     featured: true,
-    image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80',
-    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Motion', 'LocalPersistence'],
-    liveUrl: 'https://cocreate-board.vercel.app',
-    githubUrl: 'https://github.com/alifsakib/cocreate-kanban',
-    highlights: ['60fps smooth drag animations', 'Local-first instant storage', 'Full keyboard navigation (a11y)'],
-    keyFeatures: [
-      'Custom columns (Backlog, In Progress, Code Review, Done)',
-      'Subtask checklist with visual completion progress',
-      'Priority badges (Urgent, High, Medium, Low) and assignee tags',
-      'One-click card duplication and quick archive'
+    image:
+      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Motion",
+      "LocalPersistence",
     ],
-    architectureNotes: 'Custom state engine utilizing optimistic state updates with immutable reducer patterns.',
-    interactiveDemoId: 'kanban'
+    liveUrl: "https://docu-canvas-zeta.vercel.app/",
+    githubUrl: "https://github.com/AlifSakib/DocuCanvas",
+    highlights: [
+      "60fps smooth drag animations",
+      "Local-first instant storage",
+      "Full keyboard navigation (a11y)",
+    ],
+    keyFeatures: [
+      "Custom columns (Backlog, In Progress, Code Review, Done)",
+      "Subtask checklist with visual completion progress",
+      "Priority badges (Urgent, High, Medium, Low) and assignee tags",
+      "One-click card duplication and quick archive",
+    ],
+    architectureNotes:
+      "Custom state engine utilizing optimistic state updates with immutable reducer patterns.",
+    interactiveDemoId: "kanban",
   },
   {
-    id: 'devlens-sandbox',
-    title: 'DEVLENS CODE PLAYGROUND & SNIPPET TESTER',
-    tagline: 'In-browser interactive frontend playground with live HTML, CSS, and JavaScript rendering.',
-    description: 'A developer utility for rapid UI prototyping, experimenting with CSS keyframes, and generating embeddable code snippets with syntax highlighting and exportable iframe sandboxes.',
-    longDescription: 'DevLens delivers a distraction-free sandbox for front-end engineers to test React components, layout algorithms, and SVG animations without setting up a local bundler.',
-    category: 'UI / Tools',
+    id: "gift-genie-ai",
+    title: "GIFTGENIE",
+    tagline:
+      "AI-powered personalized gift intelligence platform with multi-tiered budget algorithms, local affiliate integrations, and curated hampers.",
+    description:
+      "A full-stack recommendation engine that eliminates gift-buying decision fatigue for cultural and personal milestones (Weddings, Eid, Anniversaries, Birthdays). Features dual-currency localization (BDT ৳ / USD $), Gemini natural language understanding, real-time affiliate price mapping, and interactive greeting card synthesis.",
+    longDescription:
+      "GiftGenie combines contextual multi-attribute filtering (occasion, relationship hierarchy, age bracket, recipient passions) with Google Gemini AI for instant semantic matching. Engineered with high-converting monetization zones—including Google AdSense placeholders, direct e-commerce affiliate routing (Daraz BD, Rokomari, Star Tech, Shajgoj, Amazon), and a zero-friction WhatsApp direct-order workflow for curated gift hampers.",
+    category: "AI",
+    featured: true,
+    image:
+      "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=1200&q=80",
+    techStack: [
+      "React 19",
+      "TypeScript",
+      "Express.js",
+      "Google Gemini API",
+      "Tailwind CSS",
+      "Vite",
+    ],
+    keyFeatures: [
+      "Semantic AI gift recommendation with Google Gemini",
+      "Multi-tiered budget matching (BDT ৳ / USD $)",
+      "Direct WhatsApp hamper order engine with affiliate routing",
+    ],
+    liveUrl: "https://giftgenie-liard.vercel.app/",
+    githubUrl: "https://github.com/AlifSakib/giftgenie",
+    highlights: [
+      "Gemini-powered semantic recommendation & greeting card generator",
+      "Multi-currency conversion & budget tier matching (BDT ৳ / USD $)",
+      "Direct WhatsApp hamper order engine with built-in affiliate link routing",
+      "Interactive creator monetization & revenue projection simulator",
+    ],
+    interactiveDemoId: "gift-genie",
+  },
+  // {
+  //   id: 'devlens-sandbox',
+  //   title: 'DEVLENS CODE PLAYGROUND & SNIPPET TESTER',
+  //   tagline: 'In-browser interactive frontend playground with live HTML, CSS, and JavaScript rendering.',
+  //   description: 'A developer utility for rapid UI prototyping, experimenting with CSS keyframes, and generating embeddable code snippets with syntax highlighting and exportable iframe sandboxes.',
+  //   longDescription: 'DevLens delivers a distraction-free sandbox for front-end engineers to test React components, layout algorithms, and SVG animations without setting up a local bundler.',
+  //   category: 'UI / Tools',
+  //   featured: false,
+  //   image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80',
+  //   techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Web Workers', 'Prism.js'],
+  //   liveUrl: 'https://devlens-playground.vercel.app',
+  //   githubUrl: 'https://github.com/alifsakib/devlens-code-sandbox',
+  //   highlights: ['Zero-latency live compilation', 'Console output capture', 'Export to CodeSandbox/Zip'],
+  //   keyFeatures: [
+  //     'Dual-pane code editor and live responsive preview stage',
+  //     'Pre-loaded templates (Tailwind Hero, Glassmorphism, Morphing Blobs)',
+  //     'Integrated dev console capturing errors and logs',
+  //     'HTML/CSS/JS beautifier and copyable links'
+  //   ],
+  //   architectureNotes: 'Sandboxed iframe isolation preventing main-thread blocking and script bleed.',
+  //   interactiveDemoId: 'code-sandbox'
+  // },
+  {
+    id: "aura-weather",
+    title: "AURA GLOBAL WEATHER & AIR QUALITY HUB",
+    tagline:
+      "Hyper-local weather forecasts with animated meteorological radar and UV/air quality indices.",
+    description:
+      "A weather visualization application combining OpenWeatherMap data with intuitive vector charts. Features geolocation lookups, 7-day hourly forecasts, and air pollution alerts.",
+    longDescription:
+      "Aura brings clean Scandinavian design principles to weather forecasting. It features dynamic background atmospheric gradients matching current weather conditions, interactive wind speed gauges, and hourly precipitation probability curves.",
+    category: "Full Stack",
     featured: false,
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80',
-    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Web Workers', 'Prism.js'],
-    liveUrl: 'https://devlens-playground.vercel.app',
-    githubUrl: 'https://github.com/alifsakib/devlens-code-sandbox',
-    highlights: ['Zero-latency live compilation', 'Console output capture', 'Export to CodeSandbox/Zip'],
-    keyFeatures: [
-      'Dual-pane code editor and live responsive preview stage',
-      'Pre-loaded templates (Tailwind Hero, Glassmorphism, Morphing Blobs)',
-      'Integrated dev console capturing errors and logs',
-      'HTML/CSS/JS beautifier and copyable links'
+    image:
+      "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&w=1200&q=80",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Chart.js", "REST API"],
+    liveUrl: "https://favicon.io/emoji-favicons/cloud-with-lightning-and-rain",
+    githubUrl:
+      "https://github.com/AlifSakib/Aura-Global-Weather-Air-Quality-Hub",
+    highlights: [
+      "Dynamic atmospheric shaders",
+      "Air Quality AQI breakdowns",
+      "Offline caching with ServiceWorkers",
     ],
-    architectureNotes: 'Sandboxed iframe isolation preventing main-thread blocking and script bleed.',
-    interactiveDemoId: 'code-sandbox'
+    keyFeatures: [
+      "Search across 200,000+ global cities with auto-complete",
+      "Hourly temperature trajectory line charts",
+      "Detailed metrics: Humidity, Dew point, UV Index, Wind gusts",
+      "One-tap Celsius / Fahrenheit toggle",
+    ],
+    architectureNotes:
+      "Custom caching layer to prevent duplicate API requests and handle network degradation gracefully.",
+    interactiveDemoId: "weather",
   },
-  {
-    id: 'aura-weather',
-    title: 'AURA GLOBAL WEATHER & AIR QUALITY HUB',
-    tagline: 'Hyper-local weather forecasts with animated meteorological radar and UV/air quality indices.',
-    description: 'A weather visualization application combining OpenWeatherMap data with intuitive vector charts. Features geolocation lookups, 7-day hourly forecasts, and air pollution alerts.',
-    longDescription: 'Aura brings clean Scandinavian design principles to weather forecasting. It features dynamic background atmospheric gradients matching current weather conditions, interactive wind speed gauges, and hourly precipitation probability curves.',
-    category: 'Full Stack',
-    featured: false,
-    image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&w=1200&q=80',
-    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Chart.js', 'REST API'],
-    liveUrl: 'https://aura-weather-hub.vercel.app',
-    githubUrl: 'https://github.com/alifsakib/aura-weather',
-    highlights: ['Dynamic atmospheric shaders', 'Air Quality AQI breakdowns', 'Offline caching with ServiceWorkers'],
-    keyFeatures: [
-      'Search across 200,000+ global cities with auto-complete',
-      'Hourly temperature trajectory line charts',
-      'Detailed metrics: Humidity, Dew point, UV Index, Wind gusts',
-      'One-tap Celsius / Fahrenheit toggle'
-    ],
-    architectureNotes: 'Custom caching layer to prevent duplicate API requests and handle network degradation gracefully.',
-    interactiveDemoId: 'weather'
-  }
 ];
 
 export const experiencesList: Experience[] = [
@@ -205,9 +314,9 @@ export const educationList: Education[] = [
   {
     degree: 'Bachelor of Science in Computer Science',
     institution: 'Bangladesh University of Business & Technology (BUBT)',
-    period: '2016 - 2020',
+    period: '2017 - 2021',
     location: 'Dhaka, Bangladesh',
-    honors: 'Graduated with First Class Honors (GPA: 3.00/4.00)',
+    honors: 'Graduated with First Class Honors',
     relevantCoursework: [
       'Data Structures & Algorithms',
       'Web Architecture & Distributed Systems',

@@ -6,6 +6,8 @@ import { AnalyticsDemo } from './demos/AnalyticsDemo';
 import { KanbanDemo } from './demos/KanbanDemo';
 import { CodeSandboxDemo } from './demos/CodeSandboxDemo';
 import { WeatherDemo } from './demos/WeatherDemo';
+import { DocuCanvasDemo } from './demos/DocuCanvasDemo';
+import { GiftGenieDemo } from './demos/GiftGenieDemo';
 
 interface ProjectModalProps {
   project: Project | null;
@@ -29,6 +31,12 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         return <CodeSandboxDemo />;
       case 'weather':
         return <WeatherDemo />;
+      case 'docucanvas':
+        return <DocuCanvasDemo />;
+      case 'gift-genie':
+        return (
+          <GiftGenieDemo />
+        );
       default:
         return (
           <div className="p-12 text-center text-slate-500 bg-slate-50 dark:bg-slate-800 rounded-xl">
