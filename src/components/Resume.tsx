@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { UserProfile, Experience, Education, Certification, TechStackItem } from '../types';
 import { FileText, Printer, Download, Briefcase, GraduationCap, Award, Code, CheckCircle, ExternalLink, Calendar, MapPin, Mail, Globe, Sparkles } from 'lucide-react';
 import { TechIconBadge } from './TechIcons';
+import { trackEvent } from '../utils/analytics';
 
 interface ResumeProps {
   profile: UserProfile;
@@ -27,6 +28,9 @@ export const Resume: React.FC<ResumeProps> = ({
     "https://drive.google.com/uc?export=download&id=1NJozLc4PwtsL-oCXVXif4PPwejtoLbWH";
 
   const handleDownloadResume = () => {
+    // Track resume download event
+    trackEvent('resume_download', 'Resume', 'PDF Download');
+    
     // Create temporary link and trigger download
     const link = document.createElement("a");
     link.href = RESUME_DOWNLOAD_URL;

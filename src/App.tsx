@@ -15,6 +15,7 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { ProjectModal } from './components/ProjectModal';
 import { CustomizeModal } from './components/CustomizeModal';
+import { trackEvent } from './utils/analytics';
 
 export default function App() {
   const [profile, setProfile] = useState<UserProfile>(() => {
@@ -97,6 +98,12 @@ export default function App() {
     setIsDarkMode((prev) => !prev);
   };
 
+  const handleSelectProject = (project: Project) => {
+    // Track project view
+    trackEvent('project_view', 'Projects', project.title);
+    setSelectedProject(project);
+  };
+
   return (
     <div className="min-h-screen bg-[#f9f9f9] text-[#2d2e32] dark:bg-[#0f172a] dark:text-[#e2e8f0] transition-colors duration-300">
       {/* Sticky Header Navigation */}
@@ -119,7 +126,7 @@ export default function App() {
         {/* 3. Projects Gallery (Alternating cards, case studies & interactive previews) */}
         <Projects
           projects={initialProjects}
-          onSelectProject={(project) => setSelectedProject(project)}
+          onSelectProject={handleSelectProject}
         />
 
         {/* 4. Technical Resume Section (ATS Printable Document, Experience, Skills, Certs) */}

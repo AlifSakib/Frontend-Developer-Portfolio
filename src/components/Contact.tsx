@@ -3,6 +3,7 @@ import { UserProfile, ContactMessage } from '../types';
 import { MapPin, Mail, Send, CheckCircle2, Copy, Check, MessageSquare, Linkedin, Github, Twitter, Sparkles, Clock, AlertCircle } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import emailjs from '@emailjs/browser';
+import { trackEvent } from '../utils/analytics';
 
 interface ContactProps {
   profile: UserProfile;
@@ -72,6 +73,9 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
         setSentHistory(prev => [newMessage, ...prev]);
         setSubmittedMessage(newMessage);
         setFormData({ name: '', email: '', subject: '', message: '' });
+
+        // Track successful contact form submission
+        trackEvent('contact_form_submit', 'Contact', formData.subject || 'General Inquiry');
 
         // Trigger celebratory confetti
         try {

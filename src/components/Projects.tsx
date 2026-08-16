@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Project } from '../types';
 import { Github, ExternalLink, Play, Layers, Sparkles } from 'lucide-react';
+import { trackEvent } from '../utils/analytics';
 
 interface ProjectsProps {
   projects: Project[];
