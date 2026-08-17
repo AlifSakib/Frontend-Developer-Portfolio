@@ -1,20 +1,20 @@
-import { UserProfile, TechStackItem, Project, Experience, Education, Certification } from '../types';
+import { UserProfile, TechStackItem, Project, Experience, Education, Certification, FreelanceService } from '../types';
 
 export const initialProfile: UserProfile = {
   name: 'Alif Sakib',
   handle: 'alif.dev',
-  title: 'Front-End React Developer',
+  title: 'Frontend Developer • Full-Stack Knowledge | Bug Fixer & Tech Writer',
   wavingEmoji: '👋',
   location: 'Dhaka, Bangladesh 📍',
-  bio: "Hi, I'm Alif Sakib. A passionate Front-end React & Next.js Developer based in Dhaka, Bangladesh. 📍",
-  aboutTitle: 'A dedicated Front-end Developer based in Dhaka, Bangladesh 📍',
-  aboutText1: "As a Junior/Mid-to-Senior Front-End Developer, I possess an arsenal of skills in HTML, CSS, JavaScript, React, Tailwind CSS, TypeScript, and Next.js. I excel in designing and maintaining responsive websites that offer a smooth user experience.",
-  aboutText2: "My expertise lies in crafting dynamic, engaging interfaces through writing clean and optimized code and utilizing cutting-edge development tools and techniques. I am also a team player who thrives in collaborating with cross-functional teams to produce outstanding web applications.",
+  bio: "Hi, I'm Alif Sakib. A passionate Frontend Developer (React / Next.js) with full-stack backend knowledge, specialized in UI bug fixing, performance optimization, and technical writing based in Dhaka, Bangladesh. 📍",
+  aboutTitle: 'Frontend Developer with Full-Stack Knowledge, Bug Fixing & Tech Writing Expertise 📍',
+  aboutText1: "With 3+ years of professional experience, I build high-performance web applications using React, Next.js, and TypeScript, backed by solid backend understanding (Node.js, Express, GraphQL, and WebSockets).",
+  aboutText2: "Beyond building scalable user interfaces from scratch, I excel at diagnosing stubborn UI bugs, refactoring complex state architectures, cutting rendering latency, and authoring clear, developer-friendly technical documentation.",
   avatarUrl: '#',
-  statusText: 'Available for freelance & full-time roles',
+  statusText: 'Available for frontend engineering, bug fixing & technical writing',
   isOpenToWork: true,
   yearsOfExperience: '3+',
-  completedProjectsCount: '25+',
+  completedProjectsCount: '20+',
   happyClientsCount: '15+',
   githubUrl: 'https://github.com/alifsakib',
   linkedinUrl: 'https://linkedin.com/in/alifsakib',
@@ -24,18 +24,18 @@ export const initialProfile: UserProfile = {
 };
 
 export const techStackList: TechStackItem[] = [
-  { name: 'HTML5', category: 'core', iconKey: 'html', color: '#E44D26', proficiency: 98, experienceYears: '5 yrs', description: 'Semantic HTML, Web Accessibility (a11y), SEO-friendly structure' },
-  { name: 'CSS3', category: 'styling', iconKey: 'css', color: '#1572B6', proficiency: 95, experienceYears: '5 yrs', description: 'Flexbox, CSS Grid, Keyframe Animations, Responsive Design' },
-  { name: 'JavaScript', category: 'core', iconKey: 'javascript', color: '#F7DF1E', proficiency: 94, experienceYears: '4 yrs', description: 'ES6+, Async/Await, DOM manipulation, Functional Programming' },
-  { name: 'TypeScript', category: 'core', iconKey: 'typescript', color: '#3178C6', proficiency: 90, experienceYears: '3 yrs', description: 'Strict typing, Generics, Interfaces, Type Narrowing' },
   { name: 'React', category: 'frontend', iconKey: 'react', color: '#00D8FF', proficiency: 96, experienceYears: '4 yrs', description: 'Hooks, Custom Hooks, Context API, React 19, Suspense, Concurrent Mode' },
-  { name: 'Next.js', category: 'frontend', iconKey: 'nextjs', color: '#000000', proficiency: 88, experienceYears: '3 yrs', description: 'App Router, Server Components (RSC), SSR, SSG, API Routes' },
+  { name: 'Next.js', category: 'frontend', iconKey: 'nextjs', color: '#000000', proficiency: 90, experienceYears: '3 yrs', description: 'App Router, Server Components (RSC), SSR, SSG, API Routes' },
+  { name: 'TypeScript', category: 'core', iconKey: 'typescript', color: '#3178C6', proficiency: 90, experienceYears: '3 yrs', description: 'Strict typing, Generics, Interfaces, Type Narrowing' },
   { name: 'Tailwind CSS', category: 'styling', iconKey: 'tailwind', color: '#38BDF8', proficiency: 95, experienceYears: '3 yrs', description: 'Utility-first CSS, Custom themes, JIT compiler, Responsive layouts' },
-  { name: 'Sass / SCSS', category: 'styling', iconKey: 'sass', color: '#CF649A', proficiency: 88, experienceYears: '4 yrs', description: 'Mixins, Nested rules, Variables, Modular stylesheets' },
-  { name: 'Redux / Zustand', category: 'frontend', iconKey: 'redux', color: '#764ABC', proficiency: 87, experienceYears: '3 yrs', description: 'State management, Redux Toolkit (RTK), Zustand micro-stores' },
-  { name: 'Git & GitHub', category: 'tooling', iconKey: 'git', color: '#F05032', proficiency: 92, experienceYears: '4 yrs', description: 'Branching workflows, Git rebase, CI/CD Actions, PR reviews' },
+  { name: 'Node.js', category: 'backend', iconKey: 'nodejs', color: '#339933', proficiency: 84, experienceYears: '3 yrs', description: 'Express REST APIs, Middleware, Auth tokens, Backend integrations' },
+  { name: 'GraphQL', category: 'backend', iconKey: 'graphql', color: '#E10098', proficiency: 85, experienceYears: '2.5 yrs', description: 'Apollo Client, Schema design, Queries, Mutations, Subscription caching' },
+  { name: 'Redux / Zustand', category: 'frontend', iconKey: 'redux', color: '#764ABC', proficiency: 88, experienceYears: '3 yrs', description: 'State management, Redux Toolkit (RTK), Zustand micro-stores' },
+  { name: 'JavaScript ES6+', category: 'core', iconKey: 'javascript', color: '#F7DF1E', proficiency: 95, experienceYears: '4 yrs', description: 'Async/Await, Closures, DOM manipulation, Event Loop debugging' },
+  { name: 'Git & GitHub', category: 'tooling', iconKey: 'git', color: '#F05032', proficiency: 92, experienceYears: '4 yrs', description: 'Branching workflows, PR reviews, Git bisect, CI/CD Actions' },
   { name: 'Vite', category: 'tooling', iconKey: 'vite', color: '#BD34FE', proficiency: 92, experienceYears: '3 yrs', description: 'Fast HMR, Build optimization, Rollup bundling' },
-  { name: 'Node.js', category: 'backend', iconKey: 'nodejs', color: '#339933', proficiency: 82, experienceYears: '2.5 yrs', description: 'Express REST APIs, Middleware, Auth tokens, Full-stack integration' },
+  { name: 'HTML5 / a11y', category: 'core', iconKey: 'html', color: '#E44D26', proficiency: 98, experienceYears: '5 yrs', description: 'Semantic markup, WCAG AA accessibility, SEO-friendly DOM' },
+  { name: 'CSS3 / Sass', category: 'styling', iconKey: 'css', color: '#1572B6', proficiency: 94, experienceYears: '5 yrs', description: 'CSS Grid, Flexbox, Animations, Cross-browser bug fixes' },
 ];
 
 export const initialProjects: Project[] = [
@@ -99,6 +99,45 @@ export const initialProjects: Project[] = [
     architectureNotes:
       "Built on a decoupled vector layer model with pure SVG geometry pipelines, event-driven state undo/redo stacks, and client-side jsPDF rendering.",
     interactiveDemoId: "docucanvas",
+  },
+  {
+    id: "flow-builder-refactor",
+    title: "FLOWCRAFT: CONVERSATION FLOW BUILDER & BUG AUDIT",
+    tagline:
+      "Visual graph-based flow builder engineered with React Flow & GraphQL, slashing UI render latency by 20% with zero regression state isolation.",
+    description:
+      "A complex node-graph conversational automation builder built with React Flow, TypeScript, and GraphQL. Re-architected to resolve critical state desynchronization bugs, render bottlenecks in massive multi-branch trees, and complex nested condition logic with strict regression testing.",
+    longDescription:
+      "FlowCraft solves the scalability hurdles of visual node graphs. Rebuilt on top of React Flow with custom node hooks, debounced schema validation, memoized edge renderers, and Apollo GraphQL caching. Successfully eliminated recurring UI memory leaks and reduced rendering latency by 20% on complex conversation flows.",
+    category: "UI / Tools",
+    featured: true,
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    techStack: [
+      "React Flow",
+      "React 19",
+      "TypeScript",
+      "GraphQL",
+      "Apollo Client",
+      "Tailwind CSS",
+      "Jest"
+    ],
+    liveUrl: "https://github.com/alifsakib",
+    githubUrl: "https://github.com/alifsakib",
+    highlights: [
+      "20% UI render latency reduction on large graph workflows",
+      "Zero-regression bug isolation with targeted integration testing",
+      "Custom node validation engine with dynamic schema inference",
+      "Comprehensive technical architecture documentation and ADRs"
+    ],
+    keyFeatures: [
+      "Visual drag-and-drop conversational node tree editor",
+      "GraphQL query optimization with optimistic UI updates",
+      "Automated test suites catching edge-case branching errors",
+      "In-depth technical guide on state reconciliation in graph UIs"
+    ],
+    architectureNotes:
+      "Decoupled graph coordinate math from React component render tree using selective zustand subscriptions, eliminating cascading parent-child re-renders."
   },
   {
     id: "pulse-analytics",
@@ -349,3 +388,59 @@ export const certificationsList: Certification[] = [
     verifyUrl: 'https://coursera.org/verify/google-ux'
   }
 ];
+
+export const servicesList: FreelanceService[] = [
+  {
+    id: 'frontend-engineering',
+    badge: 'Frontend Engineering & Full-Stack Knowledge',
+    title: 'Custom React & Next.js Web Development',
+    tagline: 'High-performance, accessible web applications engineered for speed, conversion, and complex interactive workflows.',
+    description: 'Transform your product vision into lightning-fast, production-ready web interfaces. From sub-second Next.js SSR apps to interactive canvas suites (React Konva / React Flow) and real-time WebSocket dashboards backed by solid Node.js/GraphQL API understanding.',
+    deliverables: [
+      'Next.js (App Router, SSR/SSG, Server Components) & SEO-optimized rendering',
+      'Complex interactive UI: Vector canvas tools, visual builders, and drag-and-drop',
+      'Real-time dashboards powered by WebSockets (Socket.IO) & Apollo GraphQL',
+      'State architecture using Redux Toolkit / Zustand with zero-layout-shift UI',
+      'Lighthouse Performance 95+ and strict TypeScript type safety'
+    ],
+    technologies: ['React 19', 'Next.js', 'TypeScript', 'Tailwind CSS', 'GraphQL', 'WebSockets', 'Redux / Zustand'],
+    icon: 'code',
+    ctaText: 'Hire for Frontend'
+  },
+  {
+    id: 'bug-fixing-refactor',
+    badge: 'UI Bug Fixing & Performance Audits',
+    title: 'Rapid Bug Diagnostics, Code Review & Refactoring',
+    tagline: 'Tackle stubborn frontend bugs, eliminate render lag, and stabilize production codebases.',
+    description: 'Got tricky rendering regressions, hydration mismatches, broken responsive layouts, or state sync headaches? I dive straight into complex codebases to isolate root causes, fix edge-case bugs, refactor messy components, and write automated test suites.',
+    deliverables: [
+      'Rapid root-cause diagnosis of UI regressions, hydration bugs, and race conditions',
+      'Component refactoring to slash render latency by 20%+ and prevent memory leaks',
+      'Cross-browser and responsive layout bug fixes (Safari/iOS/Chrome/Firefox)',
+      'State synchronization & async data handling debugging (Redux / React Query)',
+      'Targeted unit & integration test coverage (Jest / Vitest) to lock in stability'
+    ],
+    technologies: ['React DevTools', 'TypeScript', 'Jest / Vitest', 'React Query', 'Redux Toolkit', 'Chrome Profiler'],
+    icon: 'bug',
+    ctaText: 'Request Bug Fix / Audit'
+  },
+  {
+    id: 'technical-writing-docs',
+    badge: 'Developer Experience & Technical Docs',
+    title: 'Technical Writing, API Docs & Engineering Guides',
+    tagline: 'Clear, concise, and actionable developer documentation, RFCs, and SEO-driven technical articles.',
+    description: 'Bridge the gap between complex software engineering and clear developer communication. I produce comprehensive API documentation, architecture design records (ADRs), step-by-step developer onboarding guides, and high-ranking technical tutorials.',
+    deliverables: [
+      'Comprehensive REST & GraphQL API documentation with copy-pasteable code samples',
+      'System architecture guides, component storybooks, and codebase onboarding manuals',
+      'SEO-optimized technical blog posts and tutorial walkthroughs for developer tools',
+      'Clear release notes, changelogs, and technical RFC specifications',
+      'Markdown, MDX, and documentation platform structuring (Docusaurus, Mintlify, Starlight)'
+    ],
+    technologies: ['Technical Writing', 'Markdown / MDX', 'API Documentation', 'Docusaurus', 'Mermaid Diagrams', 'GitBook'],
+    icon: 'pen',
+    ctaText: 'Commission Technical Writing'
+  }
+];
+
+

@@ -167,30 +167,27 @@ export const Resume: React.FC<ResumeProps> = ({
               <div className="text-xs text-slate-700 dark:text-slate-300 space-y-1.5 leading-relaxed">
                 <div>
                   <strong className="text-slate-900 dark:text-white">
-                    Core Languages:
+                    Frontend Engineering:
                   </strong>{" "}
-                  JavaScript (ES6+), TypeScript, HTML5, CSS3/Sass.
+                  React (18/19), Next.js (App Router, SSR, SSG), TypeScript, JavaScript (ES6+), Tailwind CSS, Redux Toolkit, Zustand, HTML5, CSS3/Sass.
                 </div>
                 <div>
                   <strong className="text-slate-900 dark:text-white">
-                    Frameworks & Libraries:
+                    Backend & Real-Time APIs:
                   </strong>{" "}
-                  React (18/19), Next.js (App Router), Redux Toolkit, Zustand,
-                  Motion, Node.js / Express.
+                  Node.js, Express.js, GraphQL, Apollo Client, RESTful API Architecture, WebSockets (Socket.IO).
                 </div>
                 <div>
                   <strong className="text-slate-900 dark:text-white">
-                    Styling & UI Systems:
+                    Debugging, QA & Testing:
                   </strong>{" "}
-                  Tailwind CSS, CSS Grid/Flexbox, Design Systems (Figma to
-                  Code), Responsive & Accessible UI (WCAG AA).
+                  UI Bug Diagnostics, Memory Leak Profiling, React DevTools, Jest, Vitest, React Testing Library, ESLint, Cross-Browser Fixes.
                 </div>
                 <div>
                   <strong className="text-slate-900 dark:text-white">
-                    Build & Testing:
+                    Technical Writing & Workflow:
                   </strong>{" "}
-                  Vite, Webpack, Git/GitHub, Jest, React Testing Library,
-                  ESLint, CI/CD Actions.
+                  Developer Documentation, API Specs, Markdown/MDX, Git/GitHub, Vite, React Flow, React Konva, WCAG AA Accessibility.
                 </div>
               </div>
             </div>

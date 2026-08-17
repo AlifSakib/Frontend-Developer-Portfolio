@@ -1,6 +1,6 @@
 export interface TechStackItem {
   name: string;
-  category: 'core' | 'frontend' | 'styling' | 'tooling' | 'backend';
+  category: 'core' | 'frontend' | 'styling' | 'tooling' | 'backend' | 'devops';
   iconKey: string;
   color: string;
   proficiency: number; // 0-100
@@ -103,3 +103,16 @@ export interface ContactMessage {
   message: string;
   timestamp: string;
 }
+
+export interface FreelanceService {
+  id: string;
+  badge: string;
+  title: string;
+  tagline: string;
+  description: string;
+  deliverables: string[];
+  technologies: string[];
+  icon: 'code' | 'bug' | 'pen' | 'layers';
+  ctaText: string;
+}
+

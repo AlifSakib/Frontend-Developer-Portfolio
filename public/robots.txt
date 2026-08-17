@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alifsakib.me/sitemap.xml
+Host: https://alifsakib.me

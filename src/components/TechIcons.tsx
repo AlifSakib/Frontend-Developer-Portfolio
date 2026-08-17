@@ -85,6 +85,30 @@ export const TechIcons: Record<string, React.FC<IconProps>> = {
       <path d="M17.5 2L10 6.5L11.5 12L16 6L12.5 18L19.5 5L17.5 2Z" fill="#FFD62E"/>
     </svg>
   ),
+  docker: ({ className = 'w-8 h-8', size }) => (
+    <svg style={size ? { width: size, height: size } : undefined} className={className} viewBox="0 0 24 24" fill="#2496ED">
+      <path d="M13.98 11.08h-2.12V8.96h2.12v2.12zm-2.83 0H9.03V8.96h2.12v2.12zm-2.83 0H6.2V8.96h2.12v2.12zm8.49 0h-2.12V8.96h2.12v2.12zm-2.83-2.83h-2.12V6.13h2.12v2.12zm-2.83 0H9.03V6.13h2.12v2.12zm8.49 2.83h-2.12V8.96h2.12v2.12zm2.83-1.41c-.42-.31-1.35-.41-2.06-.35-.08-.65-.45-1.26-.99-1.68l-.48-.36-.33.49c-.27.4-.38.9-.34 1.39-.42.06-.84.19-1.24.38V5.42H5.5v6.37c-.98.54-1.63 1.54-1.63 2.71 0 1.83 1.57 3.32 3.5 3.32 3.12 0 5.64-1.74 7.64-3.41 1.63.45 3.54.21 4.79-.81.25-.2.45-.44.62-.71l.24-.39-.4-.28c-.46-.32-.99-.54-1.58-.62z"/>
+    </svg>
+  ),
+  linux: ({ className = 'w-8 h-8', size }) => (
+    <svg style={size ? { width: size, height: size } : undefined} className={className} viewBox="0 0 24 24" fill="#FCC624">
+      <path d="M12.01 2c-3.1 0-4.66 2.45-4.66 5.64 0 1.7.53 3.49 1.09 5.09-1.02.94-2.44 2.85-2.44 4.77 0 2.21 1.68 3.5 4.01 3.5 1.08 0 2.12-.34 3-.94.88.6 1.92.94 3 .94 2.33 0 4.01-1.29 4.01-3.5 0-1.92-1.42-3.83-2.44-4.77.56-1.6 1.09-3.39 1.09-5.09C18.67 4.45 15.11 2 12.01 2z" fill="#000000"/>
+      <circle cx="10" cy="6" r="1" fill="#FCC624"/>
+      <circle cx="14" cy="6" r="1" fill="#FCC624"/>
+      <path d="M12 7.5c-1 0-1.5.5-1.5 1s.5 1 1.5 1 1.5-.5 1.5-1-.5-1-1.5-1z" fill="#FFA500"/>
+    </svg>
+  ),
+  nginx: ({ className = 'w-8 h-8', size }) => (
+    <svg style={size ? { width: size, height: size } : undefined} className={className} viewBox="0 0 24 24" fill="#009639">
+      <path d="M12 2L2 7.77v10.46L12 24l10-5.77V7.77L12 2zm6.2 13.91l-4.52-5.46v5.46h-2.12V8.09h2.12l4.52 5.46V8.09h2.12v7.82h-2.12zm-8.4 0l-3.33-4.03v4.03H4.35V8.09h2.12l3.33 4.03V8.09h2.12v7.82H9.8z"/>
+    </svg>
+  ),
+  graphql: ({ className = 'w-8 h-8', size }) => (
+    <svg style={size ? { width: size, height: size } : undefined} className={className} viewBox="0 0 24 24" fill="#E10098">
+      <path d="M12 2.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM3.77 7.25a1.5 1.5 0 10.75 2.6 1.5 1.5 0 00-.75-2.6zm16.46 0a1.5 1.5 0 10-.75 2.6 1.5 1.5 0 00.75-2.6zM3.77 16.75a1.5 1.5 0 101.5 2.6 1.5 1.5 0 00-1.5-2.6zm16.46 0a1.5 1.5 0 10-1.5 2.6 1.5 1.5 0 001.5-2.6zM12 18.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3z"/>
+      <path d="M12 5.5l7.5 4.33v8.67L12 22.83 4.5 18.5V9.83L12 5.5z" stroke="#E10098" strokeWidth="1.2" fill="none"/>
+    </svg>
+  ),
 };
 
 export const TechIconBadge: React.FC<{

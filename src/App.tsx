@@ -4,11 +4,12 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { initialProfile, techStackList, initialProjects, experiencesList, educationList, certificationsList } from './data/portfolioData';
+import { initialProfile, techStackList, initialProjects, experiencesList, educationList, certificationsList, servicesList } from './data/portfolioData';
 import { UserProfile, Project } from './types';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
+import { Services } from './components/Services';
 import { Projects } from './components/Projects';
 import { Resume } from './components/Resume';
 import { Contact } from './components/Contact';
@@ -63,7 +64,7 @@ export default function App() {
 
   // Scroll spy to track active section
   useEffect(() => {
-    const sections = ['home', 'about', 'projects', 'resume', 'contact'];
+    const sections = ['home', 'about', 'services', 'projects', 'resume', 'contact'];
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
@@ -123,13 +124,16 @@ export default function App() {
         {/* 2. About Me Section (with Workspace Mockup & Rotating Text Badge) */}
         <About profile={profile} />
 
-        {/* 3. Projects Gallery (Alternating cards, case studies & interactive previews) */}
+        {/* 3. Freelance Services & Infrastructure Solutions */}
+        <Services services={servicesList} />
+
+        {/* 4. Projects Gallery (Alternating cards, case studies & interactive previews) */}
         <Projects
           projects={initialProjects}
           onSelectProject={handleSelectProject}
         />
 
-        {/* 4. Technical Resume Section (ATS Printable Document, Experience, Skills, Certs) */}
+        {/* 5. Technical Resume Section (ATS Printable Document, Experience, Skills, Certs) */}
         <Resume
           profile={profile}
           experiences={experiencesList}
@@ -138,7 +142,7 @@ export default function App() {
           techStack={techStackList}
         />
 
-        {/* 5. Contact Section (Direct info, 1-click email copy, validated message form) */}
+        {/* 6. Contact Section (Direct info, 1-click email copy, validated message form) */}
         <Contact profile={profile} />
       </main>
 
