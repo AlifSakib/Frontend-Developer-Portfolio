@@ -2,5 +2,9 @@
   "name": "Frontend Developer Portfolio",
   "description": "A modern, high-performance Front-End React Developer portfolio featuring an interactive project gallery, technical resume viewer, and contact form.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "Display a portfolio of projects with interactive features.",
+    "Provide a technical resume viewer with download option.",
+    "Include a contact form for potential clients or employers."
+  ]
 }
