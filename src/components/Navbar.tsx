@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Moon, Sun, FileText, SlidersHorizontal, Sparkles } from 'lucide-react';
 import { UserProfile } from '../types';
+import { APP_SHORT_VERSION } from '../utils/version';
 
 interface NavbarProps {
   profile: UserProfile;
@@ -55,15 +56,20 @@ export const Navbar: React.FC<NavbarProps> = ({
       }`}
     >
       <div className="max-w-6xl mx-auto px-5 sm:px-8 flex items-center justify-between">
-        {/* Brand Logo */}
-        <a
-          href="#home"
-          onClick={(e) => handleNavClick(e, '#home')}
-          className="font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 dark:text-white flex items-center gap-1 group"
-        >
-          <span>{profile.handle || 'developer.dev'}</span>
-          <span className="w-2 h-2 rounded-full bg-blue-600 group-hover:scale-150 transition-transform"></span>
-        </a>
+        {/* Brand Logo & Version Badge */}
+        <div className="flex items-center gap-2.5">
+          <a
+            href="#home"
+            onClick={(e) => handleNavClick(e, '#home')}
+            className="font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 dark:text-white flex items-center gap-1 group"
+          >
+            <span>{profile.handle || 'alif.dev'}</span>
+            <span className="w-2 h-2 rounded-full bg-blue-600 group-hover:scale-150 transition-transform"></span>
+          </a>
+          <span className="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
+            {APP_SHORT_VERSION}
+          </span>
+        </div>
 
         {/* Desktop Nav Items */}
         <nav className="hidden md:flex items-center gap-7">

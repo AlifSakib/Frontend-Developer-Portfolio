@@ -118,8 +118,27 @@ You can update the portfolio content in two ways:
 
 ---
 
+## 🏷️ Automated Versioning & Releases
+
+The website version badge (in the Navbar and Footer) is dynamically injected from `package.json` at build time. To release a new version, use standard `npm version` commands:
+
+```bash
+# Bump patch version (e.g. 2.4.0 -> 2.4.1)
+npm version patch
+
+# OR bump minor version (e.g. 2.4.0 -> 2.5.0)
+npm version minor
+
+# OR bump major version (e.g. 2.4.0 -> 3.0.0)
+npm version major
+```
+
+When you build or deploy (`npm run build` or `npm run deploy`), Vite compiles the updated version into the UI automatically.
+
+---
+
 ## 📄 License
 
 This project is licensed under the [Apache-2.0 License](LICENSE).
 Feel free to use it as an inspiration or template for your own developer portfolio!
-# Frontend-Developer-Portfolio
+
