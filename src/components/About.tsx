@@ -32,9 +32,9 @@ export const About: React.FC<AboutProps> = ({ profile }) => {
                   d="M 100, 100 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"
                   fill="none"
                 />
-                <text className="text-[14px] font-black uppercase tracking-[0.24em] fill-slate-900 dark:fill-white">
+                <text className="text-[12px] font-black uppercase tracking-[0.2em] fill-slate-900 dark:fill-white">
                   <textPath href="#circlePath" startOffset="0%">
-                    FRONT-END WEB DEVELOPER • FRONT-END DEV •
+                    FRONTEND DEV • BUG FIXER • TECH WRITER •
                   </textPath>
                 </text>
               </svg>

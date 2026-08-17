@@ -31,25 +31,33 @@ export const Projects: React.FC<ProjectsProps> = ({ projects, onSelectProject })
             </h2>
           </div>
 
-          {/* Category Filter Pills */}
+          {/* Category Filter Pills with counts */}
           <div className="flex flex-wrap items-center gap-2">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-1.5 text-xs font-bold rounded-lg transition-all ${
-                  selectedCategory === cat
-                    ? 'bg-blue-600 text-white shadow-sm'
-                    : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-blue-400'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+            {categories.map((cat) => {
+              const count = cat === 'All' ? projects.length : projects.filter(p => p.category === cat).length;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`px-3.5 py-1.5 text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 cursor-pointer ${
+                    selectedCategory === cat
+                      ? 'bg-blue-600 text-white shadow-md'
+                      : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-blue-400 dark:hover:border-blue-500'
+                  }`}
+                >
+                  <span>{cat}</span>
+                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${
+                    selectedCategory === cat ? 'bg-blue-800/60 text-white' : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'
+                  }`}>
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
 
-        {/* Project Cards (Alternating Stefan Topalovic Layout) */}
+        {/* Project Cards */}
         <div className="space-y-16 lg:space-y-20">
           {filteredProjects.map((project, index) => {
             const isReversed = index % 2 !== 0;
@@ -57,7 +65,7 @@ export const Projects: React.FC<ProjectsProps> = ({ projects, onSelectProject })
             return (
               <div
                 key={project.id}
-                className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl hover:shadow-2xl border border-slate-200/80 dark:border-slate-800 p-6 sm:p-8 lg:p-10 transition-all duration-300"
+                className="group/card bg-white dark:bg-slate-900 rounded-3xl shadow-xl hover:shadow-2xl border border-slate-200/80 dark:border-slate-800 p-6 sm:p-8 lg:p-10 transition-all duration-300 transform hover:-translate-y-1"
               >
                 <div
                   className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center ${
