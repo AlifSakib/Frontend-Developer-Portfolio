@@ -14,9 +14,11 @@ import { Projects } from './components/Projects';
 import { Resume } from './components/Resume';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
-import { ProjectModal } from './components/ProjectModal';
-import { CustomizeModal } from './components/CustomizeModal';
 import { trackEvent } from './utils/analytics';
+
+// Code-split heavy interactive modals to reduce critical initial bundle payload
+const ProjectModal = React.lazy(() => import('./components/ProjectModal').then(m => ({ default: m.ProjectModal })));
+const CustomizeModal = React.lazy(() => import('./components/CustomizeModal').then(m => ({ default: m.CustomizeModal })));
 
 export default function App() {
   const [profile, setProfile] = useState<UserProfile>(() => {
@@ -149,19 +151,24 @@ export default function App() {
       {/* Footer */}
       <Footer profile={profile} />
 
-      {/* Live Interactive Project Demo / Case Study Modal */}
-      <ProjectModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-      />
+      {/* Conditionally Loaded Heavy Modals via Suspense */}
+      <React.Suspense fallback={null}>
+        {selectedProject && (
+          <ProjectModal
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
+          />
+        )}
 
-      {/* Profile Info Customizer Modal */}
-      <CustomizeModal
-        profile={profile}
-        isOpen={isCustomizerOpen}
-        onClose={() => setIsCustomizerOpen(false)}
-        onSave={handleSaveProfile}
-      />
+        {isCustomizerOpen && (
+          <CustomizeModal
+            profile={profile}
+            isOpen={isCustomizerOpen}
+            onClose={() => setIsCustomizerOpen(false)}
+            onSave={handleSaveProfile}
+          />
+        )}
+      </React.Suspense>
     </div>
   );
 }

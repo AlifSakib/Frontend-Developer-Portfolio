@@ -83,6 +83,10 @@ export const Projects: React.FC<ProjectsProps> = ({ projects, onSelectProject })
                       <img
                         src={project.image}
                         alt={project.title}
+                        loading="lazy"
+                        decoding="async"
+                        width="600"
+                        height="375"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
 

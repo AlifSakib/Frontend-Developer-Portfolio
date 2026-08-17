@@ -6,6 +6,8 @@ export interface TechStackItem {
   proficiency: number; // 0-100
   experienceYears?: string;
   description?: string;
+  funFact?: string;
+  proTip?: string;
 }
 
 export interface Project {

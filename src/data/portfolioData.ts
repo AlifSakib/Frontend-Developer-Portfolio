@@ -24,18 +24,126 @@ export const initialProfile: UserProfile = {
 };
 
 export const techStackList: TechStackItem[] = [
-  { name: 'React', category: 'frontend', iconKey: 'react', color: '#00D8FF', proficiency: 96, experienceYears: '4 yrs', description: 'Hooks, Custom Hooks, Context API, React 19, Suspense, Concurrent Mode' },
-  { name: 'Next.js', category: 'frontend', iconKey: 'nextjs', color: '#000000', proficiency: 90, experienceYears: '3 yrs', description: 'App Router, Server Components (RSC), SSR, SSG, API Routes' },
-  { name: 'TypeScript', category: 'core', iconKey: 'typescript', color: '#3178C6', proficiency: 90, experienceYears: '3 yrs', description: 'Strict typing, Generics, Interfaces, Type Narrowing' },
-  { name: 'Tailwind CSS', category: 'styling', iconKey: 'tailwind', color: '#38BDF8', proficiency: 95, experienceYears: '3 yrs', description: 'Utility-first CSS, Custom themes, JIT compiler, Responsive layouts' },
-  { name: 'Node.js', category: 'backend', iconKey: 'nodejs', color: '#339933', proficiency: 84, experienceYears: '3 yrs', description: 'Express REST APIs, Middleware, Auth tokens, Backend integrations' },
-  { name: 'GraphQL', category: 'backend', iconKey: 'graphql', color: '#E10098', proficiency: 85, experienceYears: '2.5 yrs', description: 'Apollo Client, Schema design, Queries, Mutations, Subscription caching' },
-  { name: 'Redux / Zustand', category: 'frontend', iconKey: 'redux', color: '#764ABC', proficiency: 88, experienceYears: '3 yrs', description: 'State management, Redux Toolkit (RTK), Zustand micro-stores' },
-  { name: 'JavaScript ES6+', category: 'core', iconKey: 'javascript', color: '#F7DF1E', proficiency: 95, experienceYears: '4 yrs', description: 'Async/Await, Closures, DOM manipulation, Event Loop debugging' },
-  { name: 'Git & GitHub', category: 'tooling', iconKey: 'git', color: '#F05032', proficiency: 92, experienceYears: '4 yrs', description: 'Branching workflows, PR reviews, Git bisect, CI/CD Actions' },
-  { name: 'Vite', category: 'tooling', iconKey: 'vite', color: '#BD34FE', proficiency: 92, experienceYears: '3 yrs', description: 'Fast HMR, Build optimization, Rollup bundling' },
-  { name: 'HTML5 / a11y', category: 'core', iconKey: 'html', color: '#E44D26', proficiency: 98, experienceYears: '5 yrs', description: 'Semantic markup, WCAG AA accessibility, SEO-friendly DOM' },
-  { name: 'CSS3 / Sass', category: 'styling', iconKey: 'css', color: '#1572B6', proficiency: 94, experienceYears: '5 yrs', description: 'CSS Grid, Flexbox, Animations, Cross-browser bug fixes' },
+  { 
+    name: 'React', 
+    category: 'frontend', 
+    iconKey: 'react', 
+    color: '#00D8FF', 
+    proficiency: 96, 
+    experienceYears: '4 yrs', 
+    description: 'Hooks, Custom Hooks, Context API, React 19, Suspense, Concurrent Mode',
+    funFact: 'React 19 eliminates manual useMemo & useCallback boilerplate with its automatic compiler.'
+  },
+  { 
+    name: 'Next.js', 
+    category: 'frontend', 
+    iconKey: 'nextjs', 
+    color: '#000000', 
+    proficiency: 90, 
+    experienceYears: '3 yrs', 
+    description: 'App Router, Server Components (RSC), SSR, SSG, API Routes',
+    funFact: 'Next.js streaming with Suspense delivers initial HTML in milliseconds for sub-second LCP.'
+  },
+  { 
+    name: 'TypeScript', 
+    category: 'core', 
+    iconKey: 'typescript', 
+    color: '#3178C6', 
+    proficiency: 90, 
+    experienceYears: '3 yrs', 
+    description: 'Strict typing, Generics, Interfaces, Type Narrowing',
+    funFact: 'Static type checking eliminates ~15% of common frontend production bugs before code review.'
+  },
+  { 
+    name: 'Tailwind CSS', 
+    category: 'styling', 
+    iconKey: 'tailwind', 
+    color: '#38BDF8', 
+    proficiency: 95, 
+    experienceYears: '3 yrs', 
+    description: 'Utility-first CSS, Custom themes, JIT compiler, Responsive layouts',
+    funFact: 'Tailwind JIT engine generates only the exact utility classes used, producing <15kB production CSS.'
+  },
+  { 
+    name: 'Node.js', 
+    category: 'backend', 
+    iconKey: 'nodejs', 
+    color: '#339933', 
+    proficiency: 84, 
+    experienceYears: '3 yrs', 
+    description: 'Express REST APIs, Middleware, Auth tokens, Backend integrations',
+    funFact: 'The V8 non-blocking event loop handles thousands of concurrent connections on a single thread.'
+  },
+  { 
+    name: 'GraphQL', 
+    category: 'backend', 
+    iconKey: 'graphql', 
+    color: '#E10098', 
+    proficiency: 85, 
+    experienceYears: '2.5 yrs', 
+    description: 'Apollo Client, Schema design, Queries, Mutations, Subscription caching',
+    funFact: 'Prevents over-fetching and under-fetching by letting UI components ask for exact JSON fields.'
+  },
+  { 
+    name: 'Redux / Zustand', 
+    category: 'frontend', 
+    iconKey: 'redux', 
+    color: '#764ABC', 
+    proficiency: 88, 
+    experienceYears: '3 yrs', 
+    description: 'State management, Redux Toolkit (RTK), Zustand micro-stores',
+    funFact: 'Zustand selector subscriptions re-render only the exact component that consumes changed state.'
+  },
+  { 
+    name: 'JavaScript ES6+', 
+    category: 'core', 
+    iconKey: 'javascript', 
+    color: '#F7DF1E', 
+    proficiency: 95, 
+    experienceYears: '4 yrs', 
+    description: 'Async/Await, Closures, DOM manipulation, Event Loop debugging',
+    funFact: 'Created in 10 days in 1995 by Brendan Eich, now executing on over 98% of all websites globally.'
+  },
+  { 
+    name: 'Git & GitHub', 
+    category: 'tooling', 
+    iconKey: 'git', 
+    color: '#F05032', 
+    proficiency: 92, 
+    experienceYears: '4 yrs', 
+    description: 'Branching workflows, PR reviews, Git bisect, CI/CD Actions',
+    funFact: 'Git bisect performs a binary search across commit history to isolate the exact commit that caused a bug.'
+  },
+  { 
+    name: 'Vite', 
+    category: 'tooling', 
+    iconKey: 'vite', 
+    color: '#BD34FE', 
+    proficiency: 92, 
+    experienceYears: '3 yrs', 
+    description: 'Fast HMR, Build optimization, Rollup bundling',
+    funFact: 'Leverages native browser ES modules (ESM) to provide instant <50ms hot-module replacement.'
+  },
+  { 
+    name: 'HTML5 / a11y', 
+    category: 'core', 
+    iconKey: 'html', 
+    color: '#E44D26', 
+    proficiency: 98, 
+    experienceYears: '5 yrs', 
+    description: 'Semantic markup, WCAG AA accessibility, SEO-friendly DOM',
+    funFact: 'Semantic landmarks (<main>, <article>, <nav>) boost SEO index ranking and screen reader usability.'
+  },
+  { 
+    name: 'CSS3 / Sass', 
+    category: 'styling', 
+    iconKey: 'css', 
+    color: '#1572B6', 
+    proficiency: 94, 
+    experienceYears: '5 yrs', 
+    description: 'CSS Grid, Flexbox, Animations, Cross-browser bug fixes',
+    funFact: 'GPU-accelerated CSS properties (transform, opacity) render at silk-smooth 60fps without layout thrashing.'
+  },
 ];
 
 export const initialProjects: Project[] = [

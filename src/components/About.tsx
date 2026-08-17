@@ -18,6 +18,10 @@ export const About: React.FC<AboutProps> = ({ profile }) => {
               <img
                 src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
                 alt="Developer Coding Setup"
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="600"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-linear-to-tr from-slate-950/40 via-transparent to-transparent"></div>
