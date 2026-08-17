@@ -37,10 +37,14 @@
     <meta name="twitter:description" content="High-performance React &amp; Next.js frontend development with backend knowledge. Fast UI bug diagnostics, code refactoring, and developer documentation." />
     <meta name="twitter:image" content="https://alifsakib.me/assets/og-image.png" />
 
-    <!-- Fonts -->
+    <!-- Optimized Non-Blocking Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap">
+    </noscript>
     
     <!-- Favicon & Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-BzyaJlow.png">
@@ -131,8 +135,10 @@
       ]
     }
     </script>
-    <script type="module" crossorigin src="/assets/index-BIyXUd54.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-D9jSndOS.css">
+    <script type="module" crossorigin src="/assets/index-C-ui_ttk.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-react-Bq4Kiem1.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-motion-D-fI3A7W.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DBm_0u7R.css">
   </head>
   <body class="bg-[#f9f9f9] text-[#2d2e32] dark:bg-[#0f172a] dark:text-[#e2e8f0] transition-colors duration-300 font-['Plus_Jakarta_Sans',sans-serif] selection:bg-blue-600 selection:text-white">
     <div id="root"></div>
