@@ -109,6 +109,7 @@ export interface ContactMessage {
 export interface FreelanceService {
   id: string;
   badge: string;
+  shortBadge?: string;
   title: string;
   tagline: string;
   description: string;

@@ -208,45 +208,45 @@ export const initialProjects: Project[] = [
       "Built on a decoupled vector layer model with pure SVG geometry pipelines, event-driven state undo/redo stacks, and client-side jsPDF rendering.",
     interactiveDemoId: "docucanvas",
   },
-  {
-    id: "flow-builder-refactor",
-    title: "FLOWCRAFT: CONVERSATION FLOW BUILDER & BUG AUDIT",
-    tagline:
-      "Visual graph-based flow builder engineered with React Flow & GraphQL, slashing UI render latency by 20% with zero regression state isolation.",
-    description:
-      "A complex node-graph conversational automation builder built with React Flow, TypeScript, and GraphQL. Re-architected to resolve critical state desynchronization bugs, render bottlenecks in massive multi-branch trees, and complex nested condition logic with strict regression testing.",
-    longDescription:
-      "FlowCraft solves the scalability hurdles of visual node graphs. Rebuilt on top of React Flow with custom node hooks, debounced schema validation, memoized edge renderers, and Apollo GraphQL caching. Successfully eliminated recurring UI memory leaks and reduced rendering latency by 20% on complex conversation flows.",
-    category: "UI / Tools",
-    featured: true,
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
-    techStack: [
-      "React Flow",
-      "React 19",
-      "TypeScript",
-      "GraphQL",
-      "Apollo Client",
-      "Tailwind CSS",
-      "Jest"
-    ],
-    liveUrl: "https://github.com/alifsakib",
-    githubUrl: "https://github.com/alifsakib",
-    highlights: [
-      "20% UI render latency reduction on large graph workflows",
-      "Zero-regression bug isolation with targeted integration testing",
-      "Custom node validation engine with dynamic schema inference",
-      "Comprehensive technical architecture documentation and ADRs"
-    ],
-    keyFeatures: [
-      "Visual drag-and-drop conversational node tree editor",
-      "GraphQL query optimization with optimistic UI updates",
-      "Automated test suites catching edge-case branching errors",
-      "In-depth technical guide on state reconciliation in graph UIs"
-    ],
-    architectureNotes:
-      "Decoupled graph coordinate math from React component render tree using selective zustand subscriptions, eliminating cascading parent-child re-renders."
-  },
+  // {
+  //   id: "flow-builder-refactor",
+  //   title: "FLOWCRAFT: CONVERSATION FLOW BUILDER & BUG AUDIT",
+  //   tagline:
+  //     "Visual graph-based flow builder engineered with React Flow & GraphQL, slashing UI render latency by 20% with zero regression state isolation.",
+  //   description:
+  //     "A complex node-graph conversational automation builder built with React Flow, TypeScript, and GraphQL. Re-architected to resolve critical state desynchronization bugs, render bottlenecks in massive multi-branch trees, and complex nested condition logic with strict regression testing.",
+  //   longDescription:
+  //     "FlowCraft solves the scalability hurdles of visual node graphs. Rebuilt on top of React Flow with custom node hooks, debounced schema validation, memoized edge renderers, and Apollo GraphQL caching. Successfully eliminated recurring UI memory leaks and reduced rendering latency by 20% on complex conversation flows.",
+  //   category: "UI / Tools",
+  //   featured: true,
+  //   image:
+  //     "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+  //   techStack: [
+  //     "React Flow",
+  //     "React 19",
+  //     "TypeScript",
+  //     "GraphQL",
+  //     "Apollo Client",
+  //     "Tailwind CSS",
+  //     "Jest"
+  //   ],
+  //   liveUrl: "https://github.com/alifsakib",
+  //   githubUrl: "https://github.com/alifsakib",
+  //   highlights: [
+  //     "20% UI render latency reduction on large graph workflows",
+  //     "Zero-regression bug isolation with targeted integration testing",
+  //     "Custom node validation engine with dynamic schema inference",
+  //     "Comprehensive technical architecture documentation and ADRs"
+  //   ],
+  //   keyFeatures: [
+  //     "Visual drag-and-drop conversational node tree editor",
+  //     "GraphQL query optimization with optimistic UI updates",
+  //     "Automated test suites catching edge-case branching errors",
+  //     "In-depth technical guide on state reconciliation in graph UIs"
+  //   ],
+  //   architectureNotes:
+  //     "Decoupled graph coordinate math from React component render tree using selective zustand subscriptions, eliminating cascading parent-child re-renders."
+  // },
   {
     id: "pulse-analytics",
     title: "PULSE ANALYTICS & SAAS DASHBOARD",
@@ -501,6 +501,7 @@ export const servicesList: FreelanceService[] = [
   {
     id: 'frontend-engineering',
     badge: 'Frontend Engineering & Full-Stack Knowledge',
+    shortBadge: 'Frontend & Full-Stack',
     title: 'Custom React & Next.js Web Development',
     tagline: 'High-performance, accessible web applications engineered for speed, conversion, and complex interactive workflows.',
     description: 'Transform your product vision into lightning-fast, production-ready web interfaces. From sub-second Next.js SSR apps to interactive canvas suites (React Konva / React Flow) and real-time WebSocket dashboards backed by solid Node.js/GraphQL API understanding.',
@@ -518,6 +519,7 @@ export const servicesList: FreelanceService[] = [
   {
     id: 'bug-fixing-refactor',
     badge: 'UI Bug Fixing & Performance Audits',
+    shortBadge: 'Bug Fixing & Audits',
     title: 'Rapid Bug Diagnostics, Code Review & Refactoring',
     tagline: 'Tackle stubborn frontend bugs, eliminate render lag, and stabilize production codebases.',
     description: 'Got tricky rendering regressions, hydration mismatches, broken responsive layouts, or state sync headaches? I dive straight into complex codebases to isolate root causes, fix edge-case bugs, refactor messy components, and write automated test suites.',
@@ -535,6 +537,7 @@ export const servicesList: FreelanceService[] = [
   {
     id: 'technical-writing-docs',
     badge: 'Developer Experience & Technical Docs',
+    shortBadge: 'Tech Writing & Docs',
     title: 'Technical Writing, API Docs & Engineering Guides',
     tagline: 'Clear, concise, and actionable developer documentation, RFCs, and SEO-driven technical articles.',
     description: 'Bridge the gap between complex software engineering and clear developer communication. I produce comprehensive API documentation, architecture design records (ADRs), step-by-step developer onboarding guides, and high-ranking technical tutorials.',

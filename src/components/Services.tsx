@@ -59,10 +59,10 @@ export const Services: React.FC<ServicesProps> = ({ services }) => {
                 }`}
               >
                 <div>
-                  {/* Top Badge & Icon */}
-                  <div className="flex items-center justify-between gap-4 mb-6">
+                  {/* Top Badge & Icon Cluster (Zero Mobile Wrapping) */}
+                  <div className="flex items-center gap-3 mb-6">
                     <div
-                      className={`w-12 h-12 rounded-2xl flex items-center justify-center ${
+                      className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-xs shrink-0 ${
                         isBugFixer
                           ? 'bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-800'
                           : 'bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800'
@@ -71,13 +71,14 @@ export const Services: React.FC<ServicesProps> = ({ services }) => {
                       {getIcon(service.icon)}
                     </div>
                     <span
-                      className={`text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full ${
+                      className={`text-[11px] sm:text-xs font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full border shadow-2xs whitespace-nowrap ${
                         isBugFixer
-                          ? 'bg-rose-100/70 text-rose-800 dark:bg-rose-950/80 dark:text-rose-300'
-                          : 'bg-blue-100/70 text-blue-800 dark:bg-blue-950/80 dark:text-blue-300'
+                          ? 'bg-rose-50 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 border-rose-200 dark:border-rose-800/80'
+                          : 'bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800/80'
                       }`}
                     >
-                      {service.badge}
+                      <span className="sm:hidden">{service.shortBadge || service.badge}</span>
+                      <span className="hidden sm:inline">{service.badge}</span>
                     </span>
                   </div>
 
@@ -146,9 +147,10 @@ export const Services: React.FC<ServicesProps> = ({ services }) => {
           <div className="relative rounded-3xl p-7 sm:p-9 bg-linear-to-r from-slate-900 to-slate-800 text-white border border-slate-700/80 shadow-2xl overflow-hidden">
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider mb-4">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-black uppercase tracking-wider mb-4 whitespace-nowrap shadow-2xs">
                   <BookOpen className="w-3.5 h-3.5" />
-                  {services[2].badge}
+                  <span className="sm:hidden">{services[2].shortBadge || services[2].badge}</span>
+                  <span className="hidden sm:inline">{services[2].badge}</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-white mb-2">
                   {services[2].title}

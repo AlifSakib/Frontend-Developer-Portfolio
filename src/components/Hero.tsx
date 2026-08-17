@@ -81,12 +81,15 @@ export const Hero: React.FC<HeroProps> = ({ profile, techStack }) => {
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-16">
           {/* Left Text Column */}
           <div className="flex-1 text-center lg:text-left space-y-6">
-            {/* Status Pill */}
+            {/* Status Pill with Responsive Single-Line Text */}
             {profile.isOpenToWork && (
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/80 text-emerald-700 dark:text-emerald-300 text-xs font-bold tracking-tight shadow-xs">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span>
-                  {profile.statusText || "Available for freelance & full-time"}
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
+                <span className="hidden sm:inline">
+                  {profile.statusText || "Available for frontend engineering, bug fixing & technical writing"}
+                </span>
+                <span className="sm:hidden whitespace-nowrap">
+                  Available for freelance projects &amp; hire
                 </span>
               </div>
             )}
@@ -104,19 +107,22 @@ export const Hero: React.FC<HeroProps> = ({ profile, techStack }) => {
                 </span>
               </h1>
 
-              {/* 3 Core Value-Proposition Badge Pills */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1">
-                <span className="px-3 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/60 text-blue-700 dark:text-blue-300 text-xs font-bold flex items-center gap-1.5 shadow-xs transition-transform hover:-translate-y-0.5">
-                  <Code2 className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-                  <span>React &amp; Next.js Architecture</span>
+              {/* 3 Core Value-Proposition Badge Pills (Responsive to prevent single-item mobile stacking) */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-1.5 sm:gap-2 pt-1">
+                <span className="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/60 text-blue-700 dark:text-blue-300 text-[11px] sm:text-xs font-bold flex items-center gap-1.5 shadow-xs transition-transform hover:-translate-y-0.5">
+                  <Code2 className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
+                  <span className="sm:hidden">React &amp; Next.js</span>
+                  <span className="hidden sm:inline">React &amp; Next.js Architecture</span>
                 </span>
-                <span className="px-3 py-1.5 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200/80 dark:border-rose-800/60 text-rose-700 dark:text-rose-300 text-xs font-bold flex items-center gap-1.5 shadow-xs transition-transform hover:-translate-y-0.5">
-                  <Bug className="w-3.5 h-3.5 text-rose-600 dark:text-rose-400" />
-                  <span>UI Bug Diagnostics &amp; Refactor</span>
+                <span className="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200/80 dark:border-rose-800/60 text-rose-700 dark:text-rose-300 text-[11px] sm:text-xs font-bold flex items-center gap-1.5 shadow-xs transition-transform hover:-translate-y-0.5">
+                  <Bug className="w-3.5 h-3.5 text-rose-600 dark:text-rose-400 shrink-0" />
+                  <span className="sm:hidden">UI Bug Fixer</span>
+                  <span className="hidden sm:inline">UI Bug Diagnostics &amp; Refactor</span>
                 </span>
-                <span className="px-3 py-1.5 rounded-xl bg-amber-50 dark:bg-amber-950/60 border border-amber-200/80 dark:border-amber-800/60 text-amber-700 dark:text-amber-300 text-xs font-bold flex items-center gap-1.5 shadow-xs transition-transform hover:-translate-y-0.5">
-                  <Zap className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
-                  <span>Technical Writing &amp; Docs</span>
+                <span className="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-amber-50 dark:bg-amber-950/60 border border-amber-200/80 dark:border-amber-800/60 text-amber-700 dark:text-amber-300 text-[11px] sm:text-xs font-bold flex items-center gap-1.5 shadow-xs transition-transform hover:-translate-y-0.5">
+                  <Zap className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 shrink-0" />
+                  <span className="sm:hidden">Tech Writer</span>
+                  <span className="hidden sm:inline">Technical Writing &amp; Docs</span>
                 </span>
               </div>
             </div>
@@ -126,55 +132,71 @@ export const Hero: React.FC<HeroProps> = ({ profile, techStack }) => {
               {profile.bio}
             </p>
 
-            {/* Social Icons & Quick CTA Buttons */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-              <a
-                href={profile.linkedinUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-xl text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition transform hover:-translate-y-0.5 shadow-xs"
-                aria-label="LinkedIn Profile"
-                title="LinkedIn Profile"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
+            {/* Action Buttons & Quick Connect Row */}
+            <div className="space-y-4 pt-2">
+              {/* Primary Action Buttons */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                <a
+                  href="#projects"
+                  className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5"
+                >
+                  Explore Projects ↓
+                </a>
 
-              <a
-                href={profile.githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-xl text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition transform hover:-translate-y-0.5 shadow-xs"
-                aria-label="GitHub Profile"
-                title="GitHub Profile"
-              >
-                <Github className="w-5 h-5" />
-              </a>
+                <a
+                  href="#services"
+                  className="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-100 text-xs sm:text-sm font-bold rounded-xl border border-slate-200 dark:border-slate-700 transition transform hover:-translate-y-0.5"
+                >
+                  View Services ⚡
+                </a>
 
-              <button
-                onClick={handleCopyEmail}
-                className="p-2.5 rounded-xl text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition transform hover:-translate-y-0.5 shadow-xs cursor-pointer flex items-center gap-1.5 text-xs font-bold"
-                aria-label="Copy Email"
-                title="1-Click Copy Email"
-              >
-                {copiedEmail ? <CheckCheck className="w-5 h-5 text-emerald-500" /> : <Copy className="w-5 h-5" />}
-                <span className="hidden sm:inline">{copiedEmail ? "Copied!" : "Copy Email"}</span>
-              </button>
+                {/* 1-Click Copy Email Button */}
+                <button
+                  onClick={handleCopyEmail}
+                  className={`px-3.5 py-2.5 rounded-xl border text-xs font-bold transition-all duration-200 flex items-center gap-2 shadow-xs cursor-pointer ${
+                    copiedEmail
+                      ? 'bg-emerald-50 dark:bg-emerald-950/60 border-emerald-400 dark:border-emerald-700 text-emerald-700 dark:text-emerald-300 scale-102'
+                      : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:border-blue-400 dark:hover:border-blue-500 hover:text-blue-600'
+                  }`}
+                  aria-label={`Copy email: ${profile.email}`}
+                  title="1-Click Copy Email"
+                >
+                  {copiedEmail ? (
+                    <>
+                      <CheckCheck className="w-4 h-4 text-emerald-500 shrink-0" />
+                      <span>Copied! ({profile.email})</span>
+                    </>
+                  ) : (
+                    <>
+                      <Mail className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0" />
+                      <span>Copy Email</span>
+                    </>
+                  )}
+                </button>
+              </div>
 
-              <div className="h-6 w-px bg-slate-300 dark:bg-slate-700 mx-1 hidden sm:block"></div>
-
-              <a
-                href="#projects"
-                className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5"
-              >
-                Explore Projects ↓
-              </a>
-
-              <a
-                href="#services"
-                className="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-100 text-xs sm:text-sm font-bold rounded-xl border border-slate-200 dark:border-slate-700 transition transform hover:-translate-y-0.5"
-              >
-                View Services ⚡
-              </a>
+              {/* Social Link Badges */}
+              <div className="flex items-center justify-center lg:justify-start gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400">
+                <span>Find me on:</span>
+                <a
+                  href={profile.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold transition shadow-2xs border border-slate-200/60 dark:border-slate-700/60"
+                  aria-label="GitHub Profile"
+                >
+                  <Github className="w-3.5 h-3.5" /> GitHub
+                </a>
+                <a
+                  href={profile.linkedinUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold transition shadow-2xs border border-slate-200/60 dark:border-slate-700/60"
+                  aria-label="LinkedIn Profile"
+                >
+                  <Linkedin className="w-3.5 h-3.5 text-[#0A66C2]" /> LinkedIn
+                </a>
+              </div>
             </div>
           </div>
 
@@ -229,37 +251,37 @@ export const Hero: React.FC<HeroProps> = ({ profile, techStack }) => {
               </div>
             </div>
 
-            {/* Switch Tabs */}
-            <div className="flex items-center gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800">
+            {/* Switch Tabs - Symmetrical full-width on mobile, auto on desktop */}
+            <div className="w-full sm:w-auto grid grid-cols-2 sm:flex sm:items-center gap-1.5 bg-slate-950 p-1.5 rounded-xl border border-slate-800">
               <button
                 onClick={() => setActiveCodeTab('bug')}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition cursor-pointer ${
+                className={`w-full px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 transition cursor-pointer text-center ${
                   activeCodeTab === 'bug'
-                    ? 'bg-rose-950 text-rose-300 border border-rose-800/80'
+                    ? 'bg-rose-950 text-rose-300 border border-rose-800/80 shadow-xs'
                     : 'text-slate-400 hover:text-slate-200'
                 }`}
               >
-                <Bug className="w-3.5 h-3.5" />
-                <span>The Bug (Before)</span>
+                <Bug className="w-3.5 h-3.5 shrink-0" />
+                <span className="truncate">The Bug (Before)</span>
               </button>
               <button
                 onClick={() => setActiveCodeTab('fix')}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition cursor-pointer ${
+                className={`w-full px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 transition cursor-pointer text-center ${
                   activeCodeTab === 'fix'
-                    ? 'bg-emerald-950 text-emerald-300 border border-emerald-800/80'
+                    ? 'bg-emerald-950 text-emerald-300 border border-emerald-800/80 shadow-xs'
                     : 'text-slate-400 hover:text-slate-200'
                 }`}
               >
-                <Zap className="w-3.5 h-3.5" />
-                <span>The Fix (Optimized)</span>
+                <Zap className="w-3.5 h-3.5 shrink-0" />
+                <span className="truncate">The Fix (Optimized)</span>
               </button>
             </div>
           </div>
 
           {/* Code Body */}
           <div className="pt-4 grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
-            <div className="lg:col-span-8 overflow-x-auto font-mono text-xs text-slate-300 leading-relaxed bg-slate-950/80 p-4 rounded-2xl border border-slate-800/60">
-              <pre>
+            <div className="lg:col-span-8 w-full min-w-0 overflow-x-auto font-mono text-[11px] sm:text-xs text-slate-300 leading-relaxed bg-slate-950/80 p-3.5 sm:p-4 rounded-2xl border border-slate-800/60">
+              <pre className="w-full">
                 <code>{CODE_EXAMPLES[activeCodeTab].code}</code>
               </pre>
             </div>
