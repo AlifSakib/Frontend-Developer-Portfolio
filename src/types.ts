@@ -77,6 +77,7 @@ export interface UserProfile {
   name: string;
   handle: string;
   title: string;
+  title1: string;
   wavingEmoji: string;
   location: string;
   bio: string;

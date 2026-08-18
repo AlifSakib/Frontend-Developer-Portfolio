@@ -119,6 +119,26 @@
   background: #475569;
 }
 
+/* Prevent dark scrollbar track from bleeding into light modals & popups */
+.dark .bg-white::-webkit-scrollbar-track,
+.dark [class*="bg-white"]::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+.dark .bg-white::-webkit-scrollbar-thumb,
+.dark [class*="bg-white"]::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+/* SupportKori Widget Modal Fix: Increase container height so modal content fits with ZERO vertical scrollbar */
+.sk-widget-iframe-container {
+  height: 610px !important;
+  max-height: calc(100dvh - 90px) !important;
+}
+
+.sk-widget-iframe {
+  color-scheme: light !important;
+}
+
 /* Print Styles for Technical Resume */
 @media print {
   body * {

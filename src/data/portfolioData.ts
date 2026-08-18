@@ -1,26 +1,31 @@
 import { UserProfile, TechStackItem, Project, Experience, Education, Certification, FreelanceService } from '../types';
 
 export const initialProfile: UserProfile = {
-  name: 'Alif Sakib',
-  handle: 'alif.dev',
-  title: 'Frontend Developer • Full-Stack Knowledge | Bug Fixer & Tech Writer',
-  wavingEmoji: '👋',
-  location: 'Dhaka, Bangladesh 📍',
-  bio: "Hi, I'm Alif Sakib. A passionate Frontend Developer (React / Next.js) with full-stack backend knowledge, specialized in UI bug fixing, performance optimization, and technical writing based in Dhaka, Bangladesh. 📍",
-  aboutTitle: 'Frontend Developer with Full-Stack Knowledge, Bug Fixing & Tech Writing Expertise 📍',
-  aboutText1: "With 3+ years of professional experience, I build high-performance web applications using React, Next.js, and TypeScript, backed by solid backend understanding (Node.js, Express, GraphQL, and WebSockets).",
-  aboutText2: "Beyond building scalable user interfaces from scratch, I excel at diagnosing stubborn UI bugs, refactoring complex state architectures, cutting rendering latency, and authoring clear, developer-friendly technical documentation.",
-  avatarUrl: '#',
-  statusText: 'Available for frontend engineering, bug fixing & technical writing',
+  name: "Alif Sakib",
+  handle: "alif.dev",
+  title: "Frontend Developer",
+  title1: "Frontend Developer • Full-Stack Knowledge | Bug Fixer & Tech Writer",
+  wavingEmoji: "👋",
+  location: "Dhaka, Bangladesh 📍",
+  bio: "Hi, I'm Alif Sakib. A Frontend Developer (React / Next.js), specialized in UI bug fixing, performance optimization, and technical writing based in Dhaka, Bangladesh. 📍",
+  aboutTitle:
+    "Frontend Developer with Full-Stack Knowledge, Bug Fixing & Tech Writing Expertise 📍",
+  aboutText1:
+    "With 3+ years of professional experience, I build high-performance web applications using React, Next.js, and TypeScript, backed by solid backend understanding (Node.js, Express, GraphQL, and WebSockets).",
+  aboutText2:
+    "Beyond building scalable user interfaces from scratch, I excel at diagnosing stubborn UI bugs, refactoring complex state architectures, cutting rendering latency, and authoring clear, developer-friendly technical documentation.",
+  avatarUrl: "#",
+  statusText:
+    "Available for frontend engineering, bug fixing & technical writing",
   isOpenToWork: true,
-  yearsOfExperience: '3+',
-  completedProjectsCount: '20+',
-  happyClientsCount: '15+',
-  githubUrl: 'https://github.com/alifsakib',
-  linkedinUrl: 'https://linkedin.com/in/alifsakib',
-  email: 'alifsakib@gmail.com',
-  phone: '+880 1775778144',
-  resumeDownloadUrl: '#resume'
+  yearsOfExperience: "3+",
+  completedProjectsCount: "20+",
+  happyClientsCount: "15+",
+  githubUrl: "https://github.com/alifsakib",
+  linkedinUrl: "https://linkedin.com/in/alifsakib",
+  email: "alifsakib@gmail.com",
+  phone: "+880 1775778144",
+  resumeDownloadUrl: "#resume",
 };
 
 export const techStackList: TechStackItem[] = [

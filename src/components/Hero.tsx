@@ -97,7 +97,7 @@ export const Hero: React.FC<HeroProps> = ({ profile, techStack }) => {
             {/* Main Solid Headline (Zero UI Shift) */}
             <div className="space-y-3">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.12]">
-                Frontend Developer{" "}
+                {profile.title}{" "}
                 <span
                   className="inline-block animate-wave select-none"
                   role="img"
