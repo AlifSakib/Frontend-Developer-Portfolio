@@ -185,9 +185,9 @@ export const Resume: React.FC<ResumeProps> = ({
                 </div>
                 <div>
                   <strong className="text-slate-900 dark:text-white">
-                    Interactive UI &amp; Workflow:
+                    UI Polish, Motion &amp; Tooling:
                   </strong>{" "}
-                  React Flow (Visual Workflow Graphs), React Konva (HTML5 2D Canvas), WebSockets (Socket.IO), Git/GitHub, Vite, Docker, WCAG AA Accessibility.
+                  Framer Motion (60fps Animations), Micro-Interactions, Figma-to-Code, React Flow, React Konva, Git/GitHub, Vite, WCAG AA Accessibility.
                 </div>
               </div>
             </div>

@@ -38,7 +38,7 @@ export const About: React.FC<AboutProps> = ({ profile }) => {
                 />
                 <text className="text-[12px] font-black uppercase tracking-[0.2em] fill-slate-900 dark:fill-white">
                   <textPath href="#circlePath" startOffset="0%">
-                    FRONTEND DEV • BUG FIXER • REAL-TIME APIS •
+                    FRONTEND DEV • BUG FIXER • UI &amp; MOTION •
                   </textPath>
                 </text>
               </svg>

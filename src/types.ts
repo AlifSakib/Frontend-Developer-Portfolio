@@ -116,7 +116,7 @@ export interface FreelanceService {
   description: string;
   deliverables: string[];
   technologies: string[];
-  icon: 'code' | 'bug' | 'pen' | 'layers';
+  icon: 'code' | 'bug' | 'pen' | 'layers' | 'sparkles';
   ctaText: string;
 }
 

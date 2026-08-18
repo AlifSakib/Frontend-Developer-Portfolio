@@ -4,19 +4,19 @@ export const initialProfile: UserProfile = {
   name: "Alif Sakib",
   handle: "alif.dev",
   title: "Frontend Developer",
-  title1: "Frontend Developer | Bug Fixer & Real-Time WebApps",
+  title1: "Frontend Developer | Interactive UI, Motion & Bug Diagnostics",
   wavingEmoji: "👋",
   location: "Dhaka, Bangladesh 📍",
-  bio: "Hi, I'm Alif Sakib. A Frontend Developer (React / Next.js & TypeScript), specialized in UI bug fixing, performance optimization, and real-time interactive web apps based in Dhaka, Bangladesh. 📍",
+  bio: "Hi, I'm Alif Sakib. A Frontend Developer (React / Next.js & TypeScript), specialized in crafting pixel-perfect interactive interfaces, fluid motion animations, and rapid UI bug diagnostics based in Dhaka, Bangladesh. 📍",
   aboutTitle:
-    "Frontend Developer | Bug Fixing & Real-Time WebApp Specialist 📍",
+    "Frontend Developer focused on Interactive UI, Motion & Performance 📍",
   aboutText1:
     "With 3+ years of professional experience, I build high-performance web applications using React, Next.js, and TypeScript, with hands-on experience integrating REST APIs, GraphQL, and WebSockets.",
   aboutText2:
-    "Beyond building scalable user interfaces from scratch, I excel at diagnosing stubborn UI bugs, refactoring complex state architectures, cutting rendering latency, and engineering interactive canvas tools & real-time WebSocket systems.",
+    "Beyond building clean architectures from scratch, I excel at diagnosing stubborn UI bugs, creating fluid 60fps animations with Framer Motion, and translating complex Figma designs into responsive, living web applications.",
   avatarUrl: "#",
   statusText:
-    "Available for frontend engineering, bug fixing & real-time web apps",
+    "Available for frontend engineering, UI motion & bug fixing",
   isOpenToWork: true,
   yearsOfExperience: "3+",
   completedProjectsCount: "20+",
@@ -540,22 +540,22 @@ export const servicesList: FreelanceService[] = [
     ctaText: 'Request Bug Fix / Audit'
   },
   {
-    id: 'realtime-canvas-apps',
-    badge: 'Real-Time WebSockets & Interactive UI',
-    shortBadge: 'Real-Time & Canvas',
-    title: 'Real-Time WebSockets, Interactive Canvas & API Systems',
-    tagline: 'Engineer live WebSocket tracking dashboards, 2D canvas editors (React Konva), and visual workflow builders (React Flow).',
-    description: 'Bring dynamic interactive capabilities to your web application. From live data streaming and bidirectional WebSocket (Socket.IO) pipelines to complex HTML5 canvas editors, drag-and-drop workflow builders, and REST / GraphQL API integrations.',
+    id: 'interactive-ui-motion',
+    badge: 'Interactive UI & Motion Design',
+    shortBadge: 'Interactive UI & Motion',
+    title: 'Interactive UI Engineering, Micro-Interactions & Fluid Animations',
+    tagline: 'Bring static designs to life with silky-smooth 60fps animations, intuitive micro-interactions, and pixel-perfect Figma translation.',
+    description: 'Transform static designs into engaging, living digital products. I build fluid hover & scroll micro-interactions (Framer Motion / CSS), rich interactive components (drag-and-drop builders, visual canvas tools), and accessible design systems that elevate user engagement.',
     deliverables: [
-      'Live WebSocket (Socket.IO) pipelines for real-time tracking, live notifications & chats',
-      'Interactive 2D Canvas editors (React Konva) and visual flow builders (React Flow)',
-      'Seamless API integrations with RESTful endpoints and Apollo GraphQL queries/mutations',
-      'Optimistic UI state updates, offline-first caching, and real-time state synchronization',
-      'Hardware-accelerated rendering maintaining consistent 60fps performance under high event volume'
+      'Pixel-perfect Figma-to-React translation with strict design token & spacing fidelity',
+      'Fluid 60fps scroll, hover & gesture micro-interactions powered by Framer Motion',
+      'Interactive UI components: visual workflow builders, drag-and-drop, and canvas tools',
+      'Custom design systems, dark/light themes, and reusable component libraries (Tailwind CSS)',
+      'Hardware-accelerated rendering with zero layout shift (CLS 0) and WCAG AA accessibility'
     ],
-    technologies: ['WebSockets', 'Socket.IO', 'React Flow', 'React Konva', 'GraphQL', 'REST APIs', 'Tailwind CSS'],
-    icon: 'layers',
-    ctaText: 'Build Real-Time / Canvas App'
+    technologies: ['Framer Motion', 'React 19', 'Tailwind CSS', 'Figma to Code', 'CSS Animations', 'Micro-Interactions', 'TypeScript'],
+    icon: 'sparkles',
+    ctaText: 'Build Interactive UI'
   }
 ];
 

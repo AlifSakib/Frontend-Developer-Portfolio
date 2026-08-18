@@ -12,6 +12,8 @@ export const Services: React.FC<ServicesProps> = ({ services }) => {
     switch (type) {
       case 'bug':
         return <Bug className="w-6 h-6 text-rose-600 dark:text-rose-400" />;
+      case 'sparkles':
+        return <Sparkles className="w-6 h-6 text-amber-500 dark:text-amber-400" />;
       case 'layers':
       case 'pen':
         return <Layers className="w-6 h-6 text-amber-600 dark:text-amber-400" />;
@@ -38,10 +40,10 @@ export const Services: React.FC<ServicesProps> = ({ services }) => {
             FREELANCE SERVICES &amp; SOLUTIONS
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 dark:text-white mt-4 tracking-tight">
-            High-Impact Frontend Engineering, UI Bug Fixing &amp; Real-Time WebApps ⚡
+            High-Impact Frontend Engineering, UI Bug Fixing &amp; Motion Design ⚡
           </h2>
           <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
-            Frontend-focused with deep API integration expertise. Whether you need production React/Next.js interfaces, rapid resolution for stubborn UI bugs, or real-time WebSocket &amp; canvas applications.
+            Frontend-focused with an eye for pixel-perfect detail. Whether you need production React/Next.js interfaces, rapid resolution for stubborn UI bugs, or silky-smooth 60fps micro-interactions.
           </p>
         </div>
 
@@ -143,13 +145,13 @@ export const Services: React.FC<ServicesProps> = ({ services }) => {
           })}
         </div>
 
-        {/* 3rd Highlight Banner: Real-Time WebSockets & Interactive UI Systems */}
+        {/* 3rd Highlight Banner: Interactive UI & Motion Design */}
         {services[2] && (
           <div className="relative rounded-3xl p-7 sm:p-9 bg-linear-to-r from-slate-900 to-slate-800 text-white border border-slate-700/80 shadow-2xl overflow-hidden">
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8">
                 <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-black uppercase tracking-wider mb-4 whitespace-nowrap shadow-2xs">
-                  <Layers className="w-3.5 h-3.5" />
+                  <Sparkles className="w-3.5 h-3.5" />
                   <span className="sm:hidden">{services[2].shortBadge || services[2].badge}</span>
                   <span className="hidden sm:inline">{services[2].badge}</span>
                 </div>
@@ -173,10 +175,10 @@ export const Services: React.FC<ServicesProps> = ({ services }) => {
               <div className="lg:col-span-4 flex flex-col items-center lg:items-end justify-center">
                 <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md w-full max-w-sm text-center">
                   <div className="text-xs uppercase tracking-widest font-extrabold text-amber-400 mb-1">
-                    Interactive WebApps
+                    Motion &amp; Polish
                   </div>
                   <div className="text-lg font-bold text-white mb-3">
-                    WebSockets, Canvas &amp; APIs
+                    60fps Micro-Interactions &amp; UI Polish
                   </div>
                   <button
                     onClick={() => handleCtaClick(services[2].title)}
