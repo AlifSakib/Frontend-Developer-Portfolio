@@ -109,7 +109,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f9f9f9] text-[#2d2e32] dark:bg-[#0f172a] dark:text-[#e2e8f0] transition-colors duration-300">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden relative bg-[#f9f9f9] text-[#2d2e32] dark:bg-[#0f172a] dark:text-[#e2e8f0] transition-colors duration-300">
       {/* Sticky Header Navigation */}
       <Navbar
         profile={profile}

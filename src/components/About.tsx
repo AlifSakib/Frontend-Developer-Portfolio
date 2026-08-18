@@ -8,7 +8,7 @@ interface AboutProps {
 
 export const About: React.FC<AboutProps> = ({ profile }) => {
   return (
-    <section id="about" className="py-24 bg-white dark:bg-slate-900/50 transition-colors border-t border-b border-slate-200/60 dark:border-slate-800">
+    <section id="about" className="py-24 bg-white dark:bg-slate-900/50 transition-colors border-t border-b border-slate-200/60 dark:border-slate-800 overflow-hidden">
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Graphic with Rotating Circle Badge */}
