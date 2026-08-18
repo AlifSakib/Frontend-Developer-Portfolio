@@ -4,19 +4,19 @@ export const initialProfile: UserProfile = {
   name: "Alif Sakib",
   handle: "alif.dev",
   title: "Frontend Developer",
-  title1: "Frontend Developer • Full-Stack Knowledge | Bug Fixer & Tech Writer",
+  title1: "Frontend Developer | Bug Fixer & Real-Time WebApps",
   wavingEmoji: "👋",
   location: "Dhaka, Bangladesh 📍",
-  bio: "Hi, I'm Alif Sakib. A Frontend Developer (React / Next.js), specialized in UI bug fixing, performance optimization, and technical writing based in Dhaka, Bangladesh. 📍",
+  bio: "Hi, I'm Alif Sakib. A Frontend Developer (React / Next.js & TypeScript), specialized in UI bug fixing, performance optimization, and real-time interactive web apps based in Dhaka, Bangladesh. 📍",
   aboutTitle:
-    "Frontend Developer with Full-Stack Knowledge, Bug Fixing & Tech Writing Expertise 📍",
+    "Frontend Developer | Bug Fixing & Real-Time WebApp Specialist 📍",
   aboutText1:
-    "With 3+ years of professional experience, I build high-performance web applications using React, Next.js, and TypeScript, backed by solid backend understanding (Node.js, Express, GraphQL, and WebSockets).",
+    "With 3+ years of professional experience, I build high-performance web applications using React, Next.js, and TypeScript, with hands-on experience integrating REST APIs, GraphQL, and WebSockets.",
   aboutText2:
-    "Beyond building scalable user interfaces from scratch, I excel at diagnosing stubborn UI bugs, refactoring complex state architectures, cutting rendering latency, and authoring clear, developer-friendly technical documentation.",
+    "Beyond building scalable user interfaces from scratch, I excel at diagnosing stubborn UI bugs, refactoring complex state architectures, cutting rendering latency, and engineering interactive canvas tools & real-time WebSocket systems.",
   avatarUrl: "#",
   statusText:
-    "Available for frontend engineering, bug fixing & technical writing",
+    "Available for frontend engineering, bug fixing & real-time web apps",
   isOpenToWork: true,
   yearsOfExperience: "3+",
   completedProjectsCount: "20+",
@@ -505,11 +505,11 @@ export const certificationsList: Certification[] = [
 export const servicesList: FreelanceService[] = [
   {
     id: 'frontend-engineering',
-    badge: 'Frontend Engineering & Full-Stack Knowledge',
-    shortBadge: 'Frontend & Full-Stack',
+    badge: 'Custom React & Next.js Web Apps',
+    shortBadge: 'React & Next.js',
     title: 'Custom React & Next.js Web Development',
     tagline: 'High-performance, accessible web applications engineered for speed, conversion, and complex interactive workflows.',
-    description: 'Transform your product vision into lightning-fast, production-ready web interfaces. From sub-second Next.js SSR apps to interactive canvas suites (React Konva / React Flow) and real-time WebSocket dashboards backed by solid Node.js/GraphQL API understanding.',
+    description: 'Transform your product vision into lightning-fast, production-ready web interfaces. From sub-second Next.js SSR apps to interactive canvas suites (React Konva / React Flow) and real-time WebSocket dashboards with solid API integration.',
     deliverables: [
       'Next.js (App Router, SSR/SSG, Server Components) & SEO-optimized rendering',
       'Complex interactive UI: Vector canvas tools, visual builders, and drag-and-drop',
@@ -540,22 +540,22 @@ export const servicesList: FreelanceService[] = [
     ctaText: 'Request Bug Fix / Audit'
   },
   {
-    id: 'technical-writing-docs',
-    badge: 'Developer Experience & Technical Docs',
-    shortBadge: 'Tech Writing & Docs',
-    title: 'Technical Writing, API Docs & Engineering Guides',
-    tagline: 'Clear, concise, and actionable developer documentation, RFCs, and SEO-driven technical articles.',
-    description: 'Bridge the gap between complex software engineering and clear developer communication. I produce comprehensive API documentation, architecture design records (ADRs), step-by-step developer onboarding guides, and high-ranking technical tutorials.',
+    id: 'realtime-canvas-apps',
+    badge: 'Real-Time WebSockets & Interactive UI',
+    shortBadge: 'Real-Time & Canvas',
+    title: 'Real-Time WebSockets, Interactive Canvas & API Systems',
+    tagline: 'Engineer live WebSocket tracking dashboards, 2D canvas editors (React Konva), and visual workflow builders (React Flow).',
+    description: 'Bring dynamic interactive capabilities to your web application. From live data streaming and bidirectional WebSocket (Socket.IO) pipelines to complex HTML5 canvas editors, drag-and-drop workflow builders, and REST / GraphQL API integrations.',
     deliverables: [
-      'Comprehensive REST & GraphQL API documentation with copy-pasteable code samples',
-      'System architecture guides, component storybooks, and codebase onboarding manuals',
-      'SEO-optimized technical blog posts and tutorial walkthroughs for developer tools',
-      'Clear release notes, changelogs, and technical RFC specifications',
-      'Markdown, MDX, and documentation platform structuring (Docusaurus, Mintlify, Starlight)'
+      'Live WebSocket (Socket.IO) pipelines for real-time tracking, live notifications & chats',
+      'Interactive 2D Canvas editors (React Konva) and visual flow builders (React Flow)',
+      'Seamless API integrations with RESTful endpoints and Apollo GraphQL queries/mutations',
+      'Optimistic UI state updates, offline-first caching, and real-time state synchronization',
+      'Hardware-accelerated rendering maintaining consistent 60fps performance under high event volume'
     ],
-    technologies: ['Technical Writing', 'Markdown / MDX', 'API Documentation', 'Docusaurus', 'Mermaid Diagrams', 'GitBook'],
-    icon: 'pen',
-    ctaText: 'Commission Technical Writing'
+    technologies: ['WebSockets', 'Socket.IO', 'React Flow', 'React Konva', 'GraphQL', 'REST APIs', 'Tailwind CSS'],
+    icon: 'layers',
+    ctaText: 'Build Real-Time / Canvas App'
   }
 ];
 

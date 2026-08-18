@@ -185,9 +185,9 @@ export const Resume: React.FC<ResumeProps> = ({
                 </div>
                 <div>
                   <strong className="text-slate-900 dark:text-white">
-                    Technical Writing & Workflow:
+                    Interactive UI &amp; Workflow:
                   </strong>{" "}
-                  Developer Documentation, API Specs, Markdown/MDX, Git/GitHub, Vite, React Flow, React Konva, WCAG AA Accessibility.
+                  React Flow (Visual Workflow Graphs), React Konva (HTML5 2D Canvas), WebSockets (Socket.IO), Git/GitHub, Vite, Docker, WCAG AA Accessibility.
                 </div>
               </div>
             </div>

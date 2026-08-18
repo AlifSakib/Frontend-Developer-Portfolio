@@ -121,8 +121,8 @@ export const Hero: React.FC<HeroProps> = ({ profile, techStack }) => {
                 </span>
                 <span className="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-amber-50 dark:bg-amber-950/60 border border-amber-200/80 dark:border-amber-800/60 text-amber-700 dark:text-amber-300 text-[11px] sm:text-xs font-bold flex items-center gap-1.5 shadow-xs transition-transform hover:-translate-y-0.5">
                   <Zap className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 shrink-0" />
-                  <span className="sm:hidden">Tech Writer</span>
-                  <span className="hidden sm:inline">Technical Writing &amp; Docs</span>
+                  <span className="sm:hidden">Real-Time &amp; Canvas</span>
+                  <span className="hidden sm:inline">Real-Time WebSockets &amp; Canvas UI</span>
                 </span>
               </div>
             </div>

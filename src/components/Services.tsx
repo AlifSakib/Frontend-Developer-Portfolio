@@ -1,6 +1,6 @@
 import React from 'react';
 import { FreelanceService } from '../types';
-import { Code2, Bug, PenLine, CheckCircle2, ArrowRight, Zap, Clock, Sparkles, BookOpen, ShieldCheck } from 'lucide-react';
+import { Code2, Bug, Layers, CheckCircle2, ArrowRight, Zap, Clock, Sparkles, Activity, ShieldCheck } from 'lucide-react';
 import { trackEvent } from '../utils/analytics';
 
 interface ServicesProps {
@@ -12,8 +12,9 @@ export const Services: React.FC<ServicesProps> = ({ services }) => {
     switch (type) {
       case 'bug':
         return <Bug className="w-6 h-6 text-rose-600 dark:text-rose-400" />;
+      case 'layers':
       case 'pen':
-        return <PenLine className="w-6 h-6 text-amber-600 dark:text-amber-400" />;
+        return <Layers className="w-6 h-6 text-amber-600 dark:text-amber-400" />;
       case 'code':
       default:
         return <Code2 className="w-6 h-6 text-blue-600 dark:text-blue-400" />;
@@ -37,10 +38,10 @@ export const Services: React.FC<ServicesProps> = ({ services }) => {
             FREELANCE SERVICES &amp; SOLUTIONS
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 dark:text-white mt-4 tracking-tight">
-            High-Impact Frontend Engineering, UI Bug Fixing &amp; Tech Writing ⚡
+            High-Impact Frontend Engineering, UI Bug Fixing &amp; Real-Time WebApps ⚡
           </h2>
           <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
-            Frontend-focused with deep backend understanding. Whether you need production React/Next.js interfaces, rapid resolution for stubborn UI bugs, or crystal-clear technical documentation.
+            Frontend-focused with deep API integration expertise. Whether you need production React/Next.js interfaces, rapid resolution for stubborn UI bugs, or real-time WebSocket &amp; canvas applications.
           </p>
         </div>
 
@@ -142,13 +143,13 @@ export const Services: React.FC<ServicesProps> = ({ services }) => {
           })}
         </div>
 
-        {/* 3rd Highlight Banner: Technical Writing & Developer Documentation */}
+        {/* 3rd Highlight Banner: Real-Time WebSockets & Interactive UI Systems */}
         {services[2] && (
           <div className="relative rounded-3xl p-7 sm:p-9 bg-linear-to-r from-slate-900 to-slate-800 text-white border border-slate-700/80 shadow-2xl overflow-hidden">
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8">
                 <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-black uppercase tracking-wider mb-4 whitespace-nowrap shadow-2xs">
-                  <BookOpen className="w-3.5 h-3.5" />
+                  <Layers className="w-3.5 h-3.5" />
                   <span className="sm:hidden">{services[2].shortBadge || services[2].badge}</span>
                   <span className="hidden sm:inline">{services[2].badge}</span>
                 </div>
@@ -172,10 +173,10 @@ export const Services: React.FC<ServicesProps> = ({ services }) => {
               <div className="lg:col-span-4 flex flex-col items-center lg:items-end justify-center">
                 <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md w-full max-w-sm text-center">
                   <div className="text-xs uppercase tracking-widest font-extrabold text-amber-400 mb-1">
-                    Clear Developer Docs
+                    Interactive WebApps
                   </div>
                   <div className="text-lg font-bold text-white mb-3">
-                    APIs, Guides &amp; Architecture Specs
+                    WebSockets, Canvas &amp; APIs
                   </div>
                   <button
                     onClick={() => handleCtaClick(services[2].title)}
