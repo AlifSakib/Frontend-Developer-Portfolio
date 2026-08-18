@@ -13,6 +13,7 @@ import { Services } from './components/Services';
 import { Projects } from './components/Projects';
 import { Resume } from './components/Resume';
 import { Contact } from './components/Contact';
+import { EngagementStats } from './components/EngagementStats';
 import { Footer } from './components/Footer';
 import { trackEvent } from './utils/analytics';
 
@@ -145,8 +146,10 @@ export default function App() {
         />
 
         {/* 6. Contact Section (Direct info, 1-click email copy, validated message form) */}
-        <Contact profile={profile} />
       </main>
+
+      {/* 7. Engagement & Community Stats (Views, Loves, Shares, Coffee) */}
+      <EngagementStats />
 
       {/* Footer */}
       <Footer profile={profile} />
