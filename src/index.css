@@ -136,42 +136,6 @@
   background: #cbd5e1;
 }
 
-/* SupportKori Widget Modal Fix: Increase container height so modal content fits with ZERO vertical scrollbar */
-.sk-widget-iframe-container {
-  height: 610px !important;
-  max-height: calc(100dvh - 90px) !important;
-}
-
-.sk-widget-iframe {
-  color-scheme: light !important;
-}
-
-/* SupportKori Mobile Optimization: Transform from wide button to compact 42px floating circular icon */
-@media (max-width: 640px) {
-  .sk-widget-btn {
-    bottom: 16px !important;
-    right: 16px !important;
-    padding: 10px !important;
-    border-radius: 9999px !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25) !important;
-    gap: 0 !important;
-  }
-  .sk-widget-btn span {
-    display: none !important; /* Hides wide text on mobile to avoid blocking content */
-  }
-  .sk-widget-btn svg {
-    width: 22px !important;
-    height: 22px !important;
-  }
-  .sk-widget-iframe-container {
-    bottom: 72px !important;
-    right: 16px !important;
-    left: auto !important;
-    width: calc(100vw - 32px) !important;
-    max-width: 350px !important;
-  }
-}
-
 /* Print Styles for Technical Resume */
 @media print {
   body * {

@@ -146,12 +146,10 @@ export default function App() {
         />
 
         {/* 6. Contact Section (Direct info, 1-click email copy, validated message form) */}
+        <Contact profile={profile} />
       </main>
 
-      {/* 7. Engagement & Community Stats (Views, Loves, Shares, Coffee) */}
-      <EngagementStats />
-
-      {/* Footer */}
+      {/* Footer (with Integrated Sleek Engagement Stats) */}
       <Footer profile={profile} />
 
       {/* Conditionally Loaded Heavy Modals via Suspense */}

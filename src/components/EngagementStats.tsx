@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Eye, Heart, Share2, Coffee, Check, Sparkles } from 'lucide-react';
+import { Eye, Heart, Share2, Check } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { trackEvent } from '../utils/analytics';
 import { getRemoteCount, incrementRemoteCount } from '../utils/counterApi';
@@ -20,7 +20,7 @@ const NumberTicker: React.FC<{ value: number }> = ({ value }) => {
   return (
     <motion.span
       key={value}
-      initial={{ y: -6, opacity: 0 }}
+      initial={{ y: -5, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.2, ease: 'easeOut' }}
       className="inline-block font-mono font-bold"
@@ -153,16 +153,16 @@ export const EngagementStats: React.FC = () => {
     // 3. Confetti Burst
     try {
       confetti({
-        particleCount: 24,
-        spread: 55,
+        particleCount: 22,
+        spread: 50,
         origin: {
           x: (rect.left + rect.width / 2) / window.innerWidth,
           y: (rect.top + rect.height / 2) / window.innerHeight,
         },
         colors: ['#ec4899', '#f43f5e', '#fb7185', '#fda4af'],
-        ticks: 100,
+        ticks: 90,
         gravity: 1.2,
-        scalar: 0.8,
+        scalar: 0.75,
       });
     } catch {}
 
@@ -213,110 +213,60 @@ export const EngagementStats: React.FC = () => {
     }
   };
 
-  // Handle SupportKori Widget Trigger
-  const handleOpenSupport = () => {
-    trackEvent('engagement_support_coffee', 'Engagement', 'Clicked Support Coffee');
-    const skBtn = document.querySelector('.sk-widget-btn') as HTMLElement | null;
-    if (skBtn) {
-      skBtn.click();
-    } else {
-      window.open('https://supportkori.com/alifsakib', '_blank');
-    }
-  };
-
   return (
-    <section className="py-12 bg-slate-100/60 dark:bg-slate-900/60 border-t border-slate-200/80 dark:border-slate-800 transition-colors">
-      <div className="max-w-4xl mx-auto px-5 sm:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="relative rounded-3xl p-6 sm:p-8 bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-700/80 shadow-xl overflow-hidden text-center"
+    <>
+      {/* Sleek, Compact Framer-Motion Inspired Micro Engagement Pill Bar */}
+      <div className="inline-flex items-center gap-1.5 sm:gap-2 p-1.5 rounded-xl bg-slate-800/80 border border-slate-700/70 backdrop-blur-md shadow-xs select-none">
+        {/* 1. Views Pill */}
+        <div
+          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-900/60 text-slate-300 text-xs font-medium border border-slate-700/50"
+          title="Total real-time visitor views"
         >
-          {/* Subtle Ambient Background Glow */}
-          <div className="absolute -top-24 -right-24 w-48 h-48 bg-rose-500/10 rounded-full blur-3xl pointer-events-none"></div>
-          <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          <Eye className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+          <NumberTicker value={views} />
+          <span className="text-[10px] text-slate-400 uppercase hidden sm:inline">Views</span>
+        </div>
 
-          {/* Section Subheading */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-700/70 border border-slate-200 dark:border-slate-600 text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-3 shadow-2xs">
-            <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-            <span>Community &amp; Engagement</span>
-          </div>
+        {/* 2. Interactive Love Pill */}
+        <motion.button
+          onClick={handleLike}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.92 }}
+          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+            hasLiked
+              ? 'bg-rose-500 text-white shadow-rose-500/20'
+              : 'bg-slate-900/60 text-rose-400 border border-rose-900/40 hover:bg-rose-950/40'
+          }`}
+          title="Click to love this portfolio!"
+        >
+          <motion.div
+            animate={hasLiked ? { scale: [1, 1.4, 1] } : {}}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+          >
+            <Heart className={`w-3.5 h-3.5 ${hasLiked ? 'fill-white' : 'fill-rose-500/20'}`} />
+          </motion.div>
+          <NumberTicker value={likes} />
+          <span className="text-[10px] uppercase opacity-90 hidden sm:inline">Loves</span>
+        </motion.button>
 
-          <h3 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight mb-2">
-            Enjoyed Exploring the Portfolio?
-          </h3>
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto mb-6">
-            Leave some love, share with fellow engineers, or support my work with a coffee! ☕
-          </p>
-
-          {/* Framer Motion Inspired Engagement Pill Bar */}
-          <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 p-2 rounded-2xl bg-slate-100/90 dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-700/80 shadow-inner">
-            {/* 1. Live Visits / Views Counter */}
-            <div
-              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60 text-slate-700 dark:text-slate-300 text-xs sm:text-sm font-bold shadow-xs select-none"
-              title="Total real-time visitor views"
-            >
-              <Eye className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0" />
-              <NumberTicker value={views} />
-              <span className="text-[10px] font-semibold uppercase text-slate-500 dark:text-slate-400">Views</span>
-            </div>
-
-            {/* 2. Interactive Love / Like Button with Spring Physics */}
-            <motion.button
-              onClick={handleLike}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.92 }}
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-black transition-all shadow-xs cursor-pointer select-none ${
-                hasLiked
-                  ? 'bg-rose-500 text-white shadow-rose-500/25 border border-rose-600'
-                  : 'bg-white dark:bg-slate-800 text-rose-600 dark:text-rose-400 border border-rose-200/80 dark:border-rose-900/60 hover:bg-rose-50 dark:hover:bg-rose-950/40'
-              }`}
-              title="Click to love this portfolio!"
-            >
-              <motion.div
-                animate={hasLiked ? { scale: [1, 1.45, 1] } : {}}
-                transition={{ duration: 0.3, ease: 'easeOut' }}
-              >
-                <Heart className={`w-4 h-4 ${hasLiked ? 'fill-white' : 'fill-rose-500/20'}`} />
-              </motion.div>
-              <NumberTicker value={likes} />
-              <span className="text-[10px] font-semibold uppercase opacity-90">Loves</span>
-            </motion.button>
-
-            {/* 3. Share Portfolio Button with Animated Copy Toast */}
-            <motion.button
-              onClick={handleShare}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.92 }}
-              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 text-xs sm:text-sm font-bold shadow-xs transition-all cursor-pointer select-none"
-              title="Share portfolio or copy link"
-            >
-              {copied ? (
-                <Check className="w-4 h-4 text-emerald-500 shrink-0" />
-              ) : (
-                <Share2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-              )}
-              <NumberTicker value={shares} />
-              <span className="text-[10px] font-semibold uppercase text-slate-500 dark:text-slate-400">
-                {copied ? 'Copied!' : 'Shares'}
-              </span>
-            </motion.button>
-
-            {/* 4. Support / Coffee Button */}
-            <motion.button
-              onClick={handleOpenSupport}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.92 }}
-              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs sm:text-sm font-black shadow-xs transition-all cursor-pointer select-none"
-              title="Buy Alif a coffee on SupportKori"
-            >
-              <Coffee className="w-4 h-4 text-slate-950 fill-amber-950/20 shrink-0" />
-              <span>Coffee</span>
-            </motion.button>
-          </div>
-        </motion.div>
+        {/* 3. Share Pill */}
+        <motion.button
+          onClick={handleShare}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.92 }}
+          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-900/60 text-slate-300 hover:text-emerald-400 border border-slate-700/50 text-xs font-medium transition-all cursor-pointer"
+          title="Share portfolio or copy link"
+        >
+          {copied ? (
+            <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+          ) : (
+            <Share2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+          )}
+          <NumberTicker value={shares} />
+          <span className="text-[10px] text-slate-400 uppercase hidden sm:inline">
+            {copied ? 'Copied!' : 'Shares'}
+          </span>
+        </motion.button>
       </div>
 
       {/* Floating Animated Hearts */}
@@ -327,21 +277,21 @@ export const EngagementStats: React.FC = () => {
             initial={{ opacity: 1, y: heart.y, x: heart.x, scale: 0.6 }}
             animate={{
               opacity: 0,
-              y: heart.y - 80 - Math.random() * 40,
-              x: heart.x + (Math.random() * 50 - 25),
-              scale: 1.4,
+              y: heart.y - 70 - Math.random() * 30,
+              x: heart.x + (Math.random() * 40 - 20),
+              scale: 1.3,
             }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.9, ease: 'easeOut' }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
             className="fixed pointer-events-none z-50 text-rose-500"
             onAnimationComplete={() => {
               setFloatingHearts((prev) => prev.filter((h) => h.id !== heart.id));
             }}
           >
-            <Heart className="w-5 h-5 fill-rose-500 drop-shadow-md" />
+            <Heart className="w-4 h-4 fill-rose-500 drop-shadow-md" />
           </motion.div>
         ))}
       </AnimatePresence>
-    </section>
+    </>
   );
 };
