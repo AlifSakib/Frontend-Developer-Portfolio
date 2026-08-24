@@ -45,13 +45,13 @@ export const Footer: React.FC<FooterProps> = ({ profile }) => {
 
           {/* Right Social Icons & Back to Top */}
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-3">
-              <a
+            <div className="flex items-center gap-3">                <a
                 href={profile.linkedinUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition"
                 title="LinkedIn"
+                aria-label="LinkedIn Profile"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
@@ -61,6 +61,7 @@ export const Footer: React.FC<FooterProps> = ({ profile }) => {
                 rel="noreferrer"
                 className="p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition"
                 title="GitHub"
+                aria-label="GitHub Profile"
               >
                 <Github className="w-5 h-5" />
               </a>

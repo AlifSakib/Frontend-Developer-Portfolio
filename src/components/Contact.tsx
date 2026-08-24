@@ -254,10 +254,11 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1.5">
+                    <label htmlFor="contact-name" className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1.5">
                       Your Name *
                     </label>
                     <input
+                      id="contact-name"
                       type="text"
                       required
                       placeholder="e.g. Alex Morgan"
@@ -270,10 +271,11 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
                   </div>
 
                   <div>
-                    <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1.5">
+                    <label htmlFor="contact-email" className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1.5">
                       Your Email *
                     </label>
                     <input
+                      id="contact-email"
                       type="email"
                       required
                       placeholder="alex@company.com"
@@ -287,10 +289,11 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
                 </div>
 
                 <div>
-                  <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1.5">
+                  <label htmlFor="contact-subject" className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1.5">
                     Subject
                   </label>
                   <input
+                    id="contact-subject"
                     type="text"
                     placeholder="e.g. Frontend Engineer Opportunity / Freelance Project"
                     value={formData.subject}
@@ -303,7 +306,7 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
 
                 <div>
                   <div className="flex justify-between items-center mb-1.5">
-                    <label className="text-xs font-bold text-slate-700 dark:text-slate-300">
+                    <label htmlFor="contact-message" className="text-xs font-bold text-slate-700 dark:text-slate-300">
                       Message *
                     </label>
                     <span className="text-[11px] text-slate-400">
@@ -311,6 +314,7 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
                     </span>
                   </div>
                   <textarea
+                    id="contact-message"
                     required
                     rows={4}
                     maxLength={1000}
