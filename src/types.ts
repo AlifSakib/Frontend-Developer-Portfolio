@@ -75,6 +75,8 @@ export interface Certification {
 
 export interface UserProfile {
   name: string;
+  /** Formal name used on the printable ATS resume (matches the CV header). */
+  formalName?: string;
   handle: string;
   title: string;
   title1: string;

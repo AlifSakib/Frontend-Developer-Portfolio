@@ -1,19 +1,25 @@
 import { UserProfile, TechStackItem, Project, Experience, Education, Certification, FreelanceService } from '../types';
+import docucanvasShot from '../../assets/project-images/doc-canvas.png';
+import pulseShot from '../../assets/project-images/Dashboard.png';
+import kanbanShot from '../../assets/project-images/kanban.png';
+import giftShot from '../../assets/project-images/gift.png';
+import auraShot from '../../assets/project-images/Aura.png';
 
 export const initialProfile: UserProfile = {
   name: "Alif Sakib",
+  formalName: "MD. SAKIB HOSSAIN ALIF",
   handle: "alif.dev",
   title: "Frontend Developer",
-  title1: "Frontend Developer | Interactive UI, Motion & Bug Diagnostics",
+  title1: "Frontend Developer | React.js | Next.js | TypeScript",
   wavingEmoji: "👋",
   location: "Dhaka, Bangladesh 📍",
-  bio: "Hi, I'm Alif Sakib. A Frontend Developer (React / Next.js & TypeScript), specialized in crafting pixel-perfect interactive interfaces, fluid motion animations, and rapid UI bug diagnostics based in Dhaka, Bangladesh. 📍",
+  bio: "Hi, I'm Alif Sakib — a Frontend Developer with 3+ years of experience building scalable web applications, conversational platforms, and document management systems. Proficient in Next.js, React, and TypeScript, with expertise in API integrations (GraphQL, REST, Meta) and real-time WebSockets. 📍",
   aboutTitle:
-    "Frontend Developer focused on Interactive UI, Motion & Performance 📍",
+    "Frontend Developer focused on scalable web apps, conversational platforms & document systems 📍",
   aboutText1:
-    "With 3+ years of professional experience, I build high-performance web applications using React, Next.js, and TypeScript, with hands-on experience integrating REST APIs, GraphQL, and WebSockets.",
+    "With 3+ years of professional experience, I build scalable web applications, conversational platforms, and document management systems using Next.js, React, and TypeScript — with hands-on experience integrating APIs (GraphQL, REST, Meta) and real-time WebSockets.",
   aboutText2:
-    "Beyond building clean architectures from scratch, I excel at diagnosing stubborn UI bugs, creating fluid 60fps animations with Framer Motion, and translating complex Figma designs into responsive, living web applications.",
+    "Beyond shipping clean, maintainable code, I craft rich editing and canvas experiences (React Slate, React Konva, React Flow), diagnose stubborn UI bugs, write automated tests with Playwright, and translate complex Figma designs into responsive, living web applications.",
   avatarUrl: "#",
   statusText:
     "Available for frontend engineering, UI motion & bug fixing",
@@ -24,7 +30,7 @@ export const initialProfile: UserProfile = {
   githubUrl: "https://github.com/alifsakib",
   linkedinUrl: "https://linkedin.com/in/alifsakib",
   email: "alifsakib@gmail.com",
-  phone: "+880 1775778144",
+  phone: "+880 177 577 8144",
   resumeDownloadUrl: "#resume",
 };
 
@@ -138,16 +144,65 @@ export const techStackList: TechStackItem[] = [
     experienceYears: '5 yrs', 
     description: 'Semantic markup, WCAG AA accessibility, SEO-friendly DOM',
     funFact: 'Semantic landmarks (<main>, <article>, <nav>) boost SEO index ranking and screen reader usability.'
-  },
-  { 
+  },  { 
     name: 'CSS3 / Sass', 
     category: 'styling', 
     iconKey: 'css', 
     color: '#1572B6', 
     proficiency: 94, 
     experienceYears: '5 yrs', 
-    description: 'CSS Grid, Flexbox, Animations, Cross-browser bug fixes',
+    description: 'CSS Grid, Flexbox, Animations, Cross-browser bug fixes', 
     funFact: 'GPU-accelerated CSS properties (transform, opacity) render at silk-smooth 60fps without layout thrashing.'
+  },
+  { 
+    name: 'Material-UI', 
+    category: 'styling', 
+    iconKey: 'mui', 
+    color: '#007FFF', 
+    proficiency: 82, 
+    experienceYears: '2 yrs', 
+    description: 'MUI components, ThemeProvider, design tokens, Data Grid', 
+    funFact: 'MUI ships ~25,000 pre-built component variants, cutting complex admin dashboard build time in half.'
+  },
+  { 
+    name: 'React Query', 
+    category: 'frontend', 
+    iconKey: 'reactquery', 
+    color: '#FF4154', 
+    proficiency: 86, 
+    experienceYears: '3 yrs', 
+    description: 'TanStack Query, cache invalidation, optimistic updates, infinite lists', 
+    funFact: 'Stale-while-revalidate caching serves cached data instantly, then silently swaps in fresh responses.'
+  },
+  { 
+    name: 'React Flow', 
+    category: 'frontend', 
+    iconKey: 'reactflow', 
+    color: '#FF0072', 
+    proficiency: 85, 
+    experienceYears: '1.5 yrs', 
+    description: 'Node-graph editors, custom nodes & edges, visual conversation flows', 
+    funFact: 'Powers visual flow builders where thousands of nodes stay interactive through viewport-based rendering.'
+  },
+  { 
+    name: 'React Konva', 
+    category: 'frontend', 
+    iconKey: 'reactkonva', 
+    color: '#00B4D8', 
+    proficiency: 84, 
+    experienceYears: '1.5 yrs', 
+    description: 'HTML5 canvas rendering, document editors, shapes & transforms', 
+    funFact: 'Declarative React bindings over the Konva 2D canvas keep pixel-level drawing in sync with component state.'
+  },
+  { 
+    name: 'Docker', 
+    category: 'devops', 
+    iconKey: 'docker', 
+    color: '#2496ED', 
+    proficiency: 78, 
+    experienceYears: '2 yrs', 
+    description: 'Containers, Dockerfile, Compose, reproducible dev environments', 
+    funFact: 'A single Dockerfile removes "works on my machine" by shipping the exact OS environment with the app.'
   },
 ];
 
@@ -185,8 +240,7 @@ export const initialProjects: Project[] = [
       "DocuCanvas is an end-to-end document review and form-building studio engineered for complex workflows. It includes a sub-pixel precision coordinate canvas with multi-page management, freehand drawing with smooth SVG path interpolations, geometric shapes, dimensional measurement tools, a digital signature pad with calligraphy fonts, visual document diffing with overlay sliders, and client-side high-resolution PDF/image exports.",
     category: "React / Canvas",
     featured: true,
-    image:
-      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1200&q=80",
+    image: docucanvasShot,
     techStack: [
       "React 19",
       "TypeScript",
@@ -258,14 +312,13 @@ export const initialProjects: Project[] = [
     tagline:
       "Real-time telemetry and revenue intelligence dashboard with interactive metrics visualizers.",
     description:
-      "A comprehensive SaaS analytics suite providing product managers and founders with live customer acquisition, churn analysis, MRR forecasts, and geographic heatmaps. Built with React, Tailwind, and Recharts.",
+      "A real-time SaaS intelligence dashboard that helps teams track live metrics, user retention, and financial growth in a unified command center. Developed with interactive data visualizations and responsive layouts, featuring custom charts, conversion funnels, and live growth simulations.",
     longDescription:
       "Pulse consolidates distributed cloud metrics into an intuitive command center. It includes real-time telemetry streaming simulation, custom time-range comparators, drag-to-reorder widget grids, and CSV data export capabilities.",
     category: "React / Next.js",
     featured: true,
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
-    techStack: ["React", "Next.js", "Tailwind CSS", "Recharts", "TypeScript"],
+    image: pulseShot,
+    techStack: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Recharts"],
     liveUrl: "https://pulse-analytics-lyart.vercel.app/",
     githubUrl: "https://github.com/AlifSakib/pulse-analytics",
     highlights: [
@@ -294,8 +347,7 @@ export const initialProjects: Project[] = [
       "CoCreate solves team coordination friction with an ultra-responsive drag-and-drop board interface. Cards support rich rich-text notes, checklist progress bars, estimated vs actual hours, and keyboard shortcuts for rapid backlog organization.",
     category: "UI / Tools",
     featured: true,
-    image:
-      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    image: kanbanShot,
     techStack: [
       "React",
       "TypeScript",
@@ -331,15 +383,11 @@ export const initialProjects: Project[] = [
       "GiftGenie combines contextual multi-attribute filtering (occasion, relationship hierarchy, age bracket, recipient passions) with Google Gemini AI for instant semantic matching. Engineered with high-converting monetization zones—including Google AdSense placeholders, direct e-commerce affiliate routing (Daraz BD, Rokomari, Star Tech, Shajgoj, Amazon), and a zero-friction WhatsApp direct-order workflow for curated gift hampers.",
     category: "AI",
     featured: true,
-    image:
-      "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=1200&q=80",
+    image: giftShot,
     techStack: [
-      "React 19",
+      "React.js",
       "TypeScript",
-      "Express.js",
       "Google Gemini API",
-      "Tailwind CSS",
-      "Vite",
     ],
     keyFeatures: [
       "Semantic AI gift recommendation with Google Gemini",
@@ -389,8 +437,7 @@ export const initialProjects: Project[] = [
       "Aura brings clean Scandinavian design principles to weather forecasting. It features dynamic background atmospheric gradients matching current weather conditions, interactive wind speed gauges, and hourly precipitation probability curves.",
     category: "Full Stack",
     featured: false,
-    image:
-      "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&w=1200&q=80",
+    image: auraShot,
     techStack: ["React", "TypeScript", "Tailwind CSS", "Chart.js", "REST API"],
     liveUrl: "https://favicon.io/emoji-favicons/cloud-with-lightning-and-rain",
     githubUrl:
@@ -415,50 +462,66 @@ export const initialProjects: Project[] = [
 export const experiencesList: Experience[] = [
   {
     id: 'exp-1',
-    role: 'Front-End React Developer',
-    company: 'Woztell',
-    location: 'Spain (Remote)',
-    period: 'July 2025 - Present',
+    role: 'Frontend Developer',
+    company: 'The Red IT',
+    location: 'Dhaka, Bangladesh',
+    period: 'June 2025 - Present',
     type: 'Full-time',
-    description: 'Develop and implement new features. Integrate and manage APIs, including Meta APIs. Improved user interface (UI) and user experience (UX) and user-friendly features. Identified and resolved bugs, ensuring  a high-quality user experience.',
+    description: 'Building interactive UI features and graph visual flows for a multi-channel messaging platform, from API integration through automated testing and documentation.',
     bullets: [
-      'Developed scalable features for a multi-channel conversational platform (WhatsApp,Messenger) using Next.js and Meta APIs.',
-      'Designed dynamic graph visual flows with React Flow and GraphQL, enhancing UI/UX and resolving critical bugs, reducing UI rendering latency by 20%',
-      'Collaborated closely with UX designers to translate Figma design systems into pixel-perfect, interactive code.'
+      'Developed interactive user interface features and graph visual flows for a multi-channel messaging platform.',
+      'Connected and managed data communication using GraphQL and REST APIs.',
+      'Built rich text editing experiences using React Slate.',
+      'Wrote automated tests with Playwright to catch bugs early and keep the app stable.',
+      'Used Claude Code and custom Claude skills to speed up development and handle code refactoring.',
+      'Resolved UI issues, fixed daily bugs, and wrote clear documentation for the team.'
     ],
-    tech: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Zustand', 'Jest']
+    tech: ['React', 'Next.js', 'TypeScript', 'GraphQL', 'REST APIs', 'React Slate', 'Playwright']
   },
   {
     id: 'exp-2',
-    role: 'Front-End Web Developer',
+    role: 'Frontend Developer',
     company: 'FairPattern',
     location: 'Dhaka, Bangladesh',
-    period: '2024 - 2025',
+    period: 'June 2024 - June 2025',
     type: 'Full-time',
-    description: 'Built customer-facing portals, dashboard analytics, and eCommerce storefronts with React and modern JavaScript.',
+    description: 'Delivered document management tooling — editors, viewers and form builders — for non-technical users, backed by a modern typed state layer.',
     bullets: [
-      'Engineered core features for DigiQore (Document Management System), including custom document editors, dynamic form builders, split-screen views, and custom query builders.',
-      'Optimized state management using Redux Toolkit, React Query, and TypeScript for complex async workflows.',
-      'Integrated RESTful and GraphQL APIs with optimistic UI updates and robust error boundary fallbacks.',
-      'Maintained 95%+ unit and end-to-end test coverage across critical user authentication and checkout paths.'
+      'Built a React Konva document editor and split-screen viewer to unify user workflows.',
+      'Designed a TypeScript-based dynamic form and query builder for non-technical users.',
+      'Migrated app state to Redux Toolkit and React Query for streamlined data handling.'
     ],
-    tech: ['React', 'JavaScript (ES6+)', 'Redux Toolkit', 'Sass/SCSS', 'REST APIs', 'Git']
+    tech: ['React', 'TypeScript', 'React Konva', 'Redux Toolkit', 'React Query', 'Tailwind CSS']
   },
   {
     id: 'exp-3',
     role: 'Frontend Developer',
     company: 'Sundarban Courier Service (Pvt.) Ltd.',
     location: 'Dhaka, Bangladesh',
-    period: '2023 - 2024',
+    period: 'November 2023 - June 2024',
     type: 'Full-time',
-    description: 'Contributed to front-end refactoring, cross-browser debugging, and responsive landing pages.',
+    description: 'Shipped real-time parcel tracking and a Next.js operations dashboard for one of the country\'s largest courier networks.',
     bullets: [
-      'Built a delivery booking platform with real-time tracking via WebSockets (Socket.IO) and Apollo GraphQL.',
-      'Converted legacy jQuery codebases into modular, reusable React functional components with custom hooks.',
-      'Optimized Core Web Vitals (LCP, FID, CLS) boosting Lighthouse scores from 65 to 98.',
-      'Implemented bulk upload and CSV import/export features for shipment data management, improving operational efficiency by 30%.',
+      'Implemented real-time parcel tracking using WebSockets and Apollo GraphQL.',
+      'Developed a Next.js interactive dashboard featuring bulk parcel uploads.',
+      'Collaborated on API contracts to synchronize booking and tracking data.'
     ],
-    tech: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Git', 'Webpack', 'Apollo GraphQL', 'Socket.IO', 'Material-UI']
+    tech: ['Next.js', 'React', 'Apollo GraphQL', 'Socket.IO', 'REST APIs', 'Material-UI']
+  },
+  {
+    id: 'exp-4',
+    role: 'Frontend Developer',
+    company: 'Deshifarmer',
+    location: 'Dhaka, Bangladesh',
+    period: 'February 2023 - November 2023',
+    type: 'Full-time',
+    description: 'Built reusable admin and e-commerce interfaces with agricultural data visualization for farmers and operations teams.',
+    bullets: [
+      'Built reusable React.js and Next.js components for admin and e-commerce workflows.',
+      'Implemented map and chart visualizations to display agricultural data trends.',
+      'Optimized state management and reduced re-renders using Redux and custom hooks.'
+    ],
+    tech: ['React', 'Next.js', 'Redux', 'Custom Hooks', 'Charts & Maps', 'REST APIs']
   }
 ];
 
@@ -494,11 +557,10 @@ export const certificationsList: Certification[] = [
     verifyUrl: 'https://coursera.org/share/09a4df165e4acc34651c909154bc2777'
   },
   {
-    name: 'Google UX Design Professional Certificate',
-    issuer: 'Google',
-    date: '2022',
-    credentialId: 'GOOGLE-UX-541289',
-    verifyUrl: 'https://coursera.org/verify/google-ux'
+    name: 'Front-End System Design',
+    issuer: 'Master.dev',
+    date: 'Aug 2026',
+    credentialId: 'a101d1ca2e-gkuyfreSHY'
   }
 ];
 

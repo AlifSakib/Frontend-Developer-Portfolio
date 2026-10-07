@@ -11,7 +11,8 @@ interface ProjectsProps {
 export const Projects: React.FC<ProjectsProps> = ({ projects, onSelectProject }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  const categories = ['All', 'React / Next.js', 'UI / Tools', 'Full Stack'];
+  // Derive filters from the data so every project category (e.g. "AI", "React / Canvas") stays reachable
+  const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))];
 
   const filteredProjects = selectedCategory === 'All'
     ? projects

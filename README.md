@@ -36,8 +36,8 @@ A modern, high-performance, and responsive developer portfolio web application b
 ### **Developer Profile & Skills Reflected**
 - **Frontend**: React.js, Next.js, TypeScript, JavaScript (ES6+), Redux Toolkit, Tailwind CSS, Material-UI (MUI)
 - **Backend & APIs**: Node.js, Express.js, GraphQL, Apollo Client, REST APIs, WebSockets (Socket.IO)
-- **Libraries**: React Flow (Visual Workflow Graphs), React Konva (HTML5 2D Canvas)
-- **DevOps & Tooling**: Git, GitHub, Docker
+- **Libraries**: React Flow (Visual Workflow Graphs), React Konva (HTML5 2D Canvas), React Slate (Rich Text), React Query, dnd-kit
+- **Testing & Tooling**: Playwright, Jest / Vitest, Git, GitHub, Docker, Vite
 
 ---
 

@@ -109,6 +109,33 @@ export const TechIcons: Record<string, React.FC<IconProps>> = {
       <path d="M12 5.5l7.5 4.33v8.67L12 22.83 4.5 18.5V9.83L12 5.5z" stroke="#E10098" strokeWidth="1.2" fill="none"/>
     </svg>
   ),
+  mui: ({ className = 'w-8 h-8', size }) => (
+    <svg style={size ? { width: size, height: size } : undefined} className={className} viewBox="0 0 24 24">
+      <rect width="24" height="24" rx="3" fill="#007FFF"/>
+      <path d="M5 17.5V6.5h2.6l4.4 7.3 4.4-7.3H19v11h-2.1v-7.4L12 16.4 8.1 10.1v7.4H5z" fill="#fff"/>
+    </svg>
+  ),
+  reactquery: ({ className = 'w-8 h-8', size }) => (
+    <svg style={size ? { width: size, height: size } : undefined} className={className} viewBox="0 0 24 24" fill="none">
+      <path d="M20.4 12a8.4 8.4 0 1 1-3.1-6.5" stroke="#FF4154" strokeWidth="3" strokeLinecap="round"/>
+      <path d="M12 8.2l3.6 2.1v4.2L12 16.6l-3.6-2.1v-4.2L12 8.2z" fill="#FF4154"/>
+    </svg>
+  ),
+  reactflow: ({ className = 'w-8 h-8', size }) => (
+    <svg style={size ? { width: size, height: size } : undefined} className={className} viewBox="0 0 24 24" fill="none">
+      <path d="M6.5 7.5h4.2a3 3 0 0 1 3 3v3a3 3 0 0 0 3 3H19" stroke="#FF0072" strokeWidth="1.8" strokeLinecap="round"/>
+      <rect x="2.5" y="5" width="7" height="5" rx="1.6" fill="#FF0072"/>
+      <rect x="14.5" y="14" width="7" height="5" rx="1.6" fill="#FF0072" opacity="0.55"/>
+      <circle cx="13.7" cy="10.5" r="1.7" fill="#FF0072"/>
+    </svg>
+  ),
+  reactkonva: ({ className = 'w-8 h-8', size }) => (
+    <svg style={size ? { width: size, height: size } : undefined} className={className} viewBox="0 0 24 24" fill="none">
+      <rect x="3" y="4" width="18" height="16" rx="2.4" stroke="#00B4D8" strokeWidth="1.8"/>
+      <path d="M6.5 15.5c2.5-6 5-6 7 0s4.5 1.5 4.5-2.5" stroke="#00B4D8" strokeWidth="1.8" strokeLinecap="round"/>
+      <circle cx="9" cy="9.5" r="1.6" fill="#00B4D8"/>
+    </svg>
+  ),
 };
 
 export const TechIconBadge: React.FC<{

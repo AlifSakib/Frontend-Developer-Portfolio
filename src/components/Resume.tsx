@@ -3,6 +3,7 @@ import { UserProfile, Experience, Education, Certification, TechStackItem } from
 import { FileText, Printer, Download, Briefcase, GraduationCap, Award, Code, CheckCircle, ExternalLink, Calendar, MapPin, Mail, Globe, Sparkles } from 'lucide-react';
 import { TechIconBadge } from './TechIcons';
 import { trackEvent } from '../utils/analytics';
+import resumePdf from '../../assets/resume/MD. SAKIB HOSSAIN ALIF-Frontend Developer CV.pdf';
 
 interface ResumeProps {
   profile: UserProfile;
@@ -23,8 +24,8 @@ export const Resume: React.FC<ResumeProps> = ({
     "ats" | "experience" | "skills" | "education"
   >("ats");
 
-  // Google Drive Resume Download
-  const RESUME_DOWNLOAD_URL =
+  // Updated CV bundled with the site (falls back to Google Drive copy)
+  const RESUME_DOWNLOAD_URL = resumePdf ||
     "https://drive.google.com/uc?export=download&id=1NJozLc4PwtsL-oCXVXif4PPwejtoLbWH";
 
   const handleDownloadResume = () => {
@@ -34,7 +35,7 @@ export const Resume: React.FC<ResumeProps> = ({
     // Create temporary link and trigger download
     const link = document.createElement("a");
     link.href = RESUME_DOWNLOAD_URL;
-    link.download = `${profile.name.replace(/\s+/g, "_")}_Resume.pdf`;
+    link.download = `${(profile.formalName || profile.name).replace(/\s+/g, "_")}_CV.pdf`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -132,7 +133,7 @@ export const Resume: React.FC<ResumeProps> = ({
             <div className="border-b-2 border-slate-900 dark:border-slate-100 pb-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
               <div>
                 <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 dark:text-white uppercase">
-                  {profile.name}
+                  {profile.formalName || profile.name}
                 </h1>
                 <p className="text-base font-bold text-blue-600 dark:text-blue-400 mt-0.5">
                   {profile.title}
@@ -167,27 +168,27 @@ export const Resume: React.FC<ResumeProps> = ({
               <div className="text-xs text-slate-700 dark:text-slate-300 space-y-1.5 leading-relaxed">
                 <div>
                   <strong className="text-slate-900 dark:text-white">
-                    Frontend Engineering:
+                    Frontend:
                   </strong>{" "}
-                  React (18/19), Next.js (App Router, SSR, SSG), TypeScript, JavaScript (ES6+), Tailwind CSS, Redux Toolkit, Zustand, HTML5, CSS3/Sass.
+                  React.js, Next.js, TypeScript, JavaScript (ES6+), Redux Toolkit, React Query, Tailwind CSS, Material-UI, HTML5, CSS3/Sass.
                 </div>
                 <div>
                   <strong className="text-slate-900 dark:text-white">
-                    Backend & Real-Time APIs:
+                    Backend & APIs:
                   </strong>{" "}
-                  Node.js, Express.js, GraphQL, Apollo Client, RESTful API Architecture, WebSockets (Socket.IO).
+                  Node.js, Express.js, GraphQL, Apollo Client, REST APIs, WebSockets (Socket.IO), Meta APIs.
                 </div>
                 <div>
                   <strong className="text-slate-900 dark:text-white">
-                    Debugging, QA & Testing:
+                    Interactive UI Libraries:
                   </strong>{" "}
-                  UI Bug Diagnostics, Memory Leak Profiling, React DevTools, Jest, Vitest, React Testing Library, ESLint, Cross-Browser Fixes.
+                  React Flow (graph flows), React Konva (canvas editors), React Slate (rich text), dnd-kit, Framer Motion / CSS animations.
                 </div>
                 <div>
                   <strong className="text-slate-900 dark:text-white">
-                    UI Polish, Motion &amp; Tooling:
+                    Tools, Testing & DevOps:
                   </strong>{" "}
-                  Framer Motion (60fps Animations), Micro-Interactions, Figma-to-Code, React Flow, React Konva, Git/GitHub, Vite, WCAG AA Accessibility.
+                  Git, Docker, Vite, Playwright, Jest / Vitest, React DevTools, Claude Code (AI-assisted development), WCAG AA accessibility.
                 </div>
               </div>
             </div>
